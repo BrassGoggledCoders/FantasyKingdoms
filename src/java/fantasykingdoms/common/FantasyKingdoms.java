@@ -42,6 +42,8 @@ public class FantasyKingdoms
 		// Items
 		itemEmptyTankard = new ItemEmptyTankard().setUnlocalizedName("itemEmptyTankard");
 		itemFullTankard = new ItemTankard().setUnlocalizedName("itemFullTankard");
+		GameRegistry.registerItem(itemEmptyTankard, "ItemEmptyTankard");
+		GameRegistry.registerItem(itemFullTankard, "ItemFullTankard");
 	}
 
 	@Mod.EventHandler
