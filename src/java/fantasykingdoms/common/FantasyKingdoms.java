@@ -2,6 +2,7 @@ package fantasykingdoms.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -15,8 +16,10 @@ import net.minecraftforge.fluids.FluidRegistry;
 @Mod(modid = "fantasykingdoms", name = "Dwarven Kingdoms", version = "1.0.0", dependencies = "required-after:boilerplate")
 public class FantasyKingdoms
 {
-	public Fluid beerFluid;
-	public Block blockBeer;
+	public static Fluid beerFluid;
+	public static Block blockBeer;
+
+	public static Item itemEmptyTankard, itemFullTankard;
 
 	@Mod.Instance("fantasykingdoms")
 	public static FantasyKingdoms instance;
@@ -35,6 +38,10 @@ public class FantasyKingdoms
 		blockBeer = new BlockFluidBeer(beerFluid, Material.water).setBlockName("beerFluidBlock");
 
 		GameRegistry.registerBlock(blockBeer, "blockbeer");
+
+		// Items
+		itemEmptyTankard = new ItemEmptyTankard().setUnlocalizedName("itemEmptyTankard");
+		itemFullTankard = new ItemTankard().setUnlocalizedName("itemFullTankard");
 	}
 
 	@Mod.EventHandler
