@@ -10,25 +10,27 @@
  * (http://www.minecraftforum.net/topic/251532-181-steamcraft-source-code-releasedmlv054wip/)
  *
  */
-package fantasykingdoms.common;
+package fantasykingdoms.common.items;
 
-import net.minecraftforge.fluids.Fluid;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 
 /**
  * @author warlordjones
- * 
+ *
  */
-public class FluidBeer extends Fluid
+public class BaseItemWithMetadata extends BaseItem
 {
-	public FluidBeer(String fluidName)
+	public BaseItemWithMetadata()
 	{
-		super(fluidName);
-		this.setGaseous(true);
-		this.setTemperature(30);
-		this.setDensity(10);
-		this.setViscosity(10);
-		this.setLuminosity(1);
-		this.setIcons(this.stillIcon, this.flowingIcon);
+		super();
+		this.setHasSubtypes(true);
+		this.setCreativeTab(CreativeTabs.tabMisc);
 	}
 
+	@Override
+	public String getUnlocalizedName(ItemStack is)
+	{
+		return super.getUnlocalizedName() + "." + is.getItemDamage();
+	}
 }

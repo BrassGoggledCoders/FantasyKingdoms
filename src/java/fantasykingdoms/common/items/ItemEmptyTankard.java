@@ -1,8 +1,10 @@
-package fantasykingdoms.common;
+package fantasykingdoms.common.items;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import fantasykingdoms.common.FantasyKingdoms;
 
 public class ItemEmptyTankard extends BaseItem
 {

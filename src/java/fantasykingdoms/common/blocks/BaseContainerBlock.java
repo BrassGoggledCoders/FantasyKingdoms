@@ -1,4 +1,4 @@
-package fantasykingdoms.common;
+package fantasykingdoms.common.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;

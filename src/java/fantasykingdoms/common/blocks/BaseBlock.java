@@ -10,33 +10,44 @@
  * (http://www.minecraftforum.net/topic/251532-181-steamcraft-source-code-releasedmlv054wip/)
  *
  */
-package fantasykingdoms.common;
+package fantasykingdoms.common.blocks;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.IIcon;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import boilerplate.common.baseclasses.RootItem;
-
 /**
- * @author warlordjones
+ * @author Surseance
  * 
  */
-public class BaseItem extends RootItem
+public class BaseBlock extends Block
 {
-	public BaseItem()
+	public BaseBlock(Material mat)
 	{
-		super();
-		// TODO
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		super(mat);
+		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setHardness(0.5F);
 	}
 
-	@SideOnly(Side.CLIENT)
 	@Override
-	public void registerIcons(IIconRegister par1IconRegister)
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister ir)
 	{
-		this.itemIcon = par1IconRegister.registerIcon("fantasykingdoms:" + this.getUnlocalizedName().substring(5));
+		this.blockIcon = ir.registerIcon("fantasykingdoms:" + this.getUnlocalizedName().substring(5));
+	}
+
+	/**
+	 * Gets the block's texture. Args: side, meta
+	 */
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+	{
+		return this.blockIcon;
 	}
 }

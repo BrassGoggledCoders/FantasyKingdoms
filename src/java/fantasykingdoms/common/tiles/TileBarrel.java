@@ -1,4 +1,4 @@
-package fantasykingdoms.common;
+package fantasykingdoms.common.tiles;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;

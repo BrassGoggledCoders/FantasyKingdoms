@@ -10,6 +10,12 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+import fantasykingdoms.common.blocks.BlockBarrel;
+import fantasykingdoms.common.blocks.BlockFluidBeer;
+import fantasykingdoms.common.blocks.FluidBeer;
+import fantasykingdoms.common.items.ItemEmptyTankard;
+import fantasykingdoms.common.items.ItemTankard;
+
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
