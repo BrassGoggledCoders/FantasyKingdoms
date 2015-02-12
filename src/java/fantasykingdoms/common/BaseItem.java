@@ -14,20 +14,22 @@ package fantasykingdoms.common;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import boilerplate.common.baseclasses.RootItem;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+import boilerplate.common.baseclasses.RootItem;
+
 /**
  * @author warlordjones
- *
+ * 
  */
 public class BaseItem extends RootItem
 {
 	public BaseItem()
 	{
 		super();
-		//TODO
+		// TODO
 		this.setCreativeTab(CreativeTabs.tabMisc);
 	}
 
@@ -35,6 +37,6 @@ public class BaseItem extends RootItem
 	@Override
 	public void registerIcons(IIconRegister par1IconRegister)
 	{
-		this.itemIcon = par1IconRegister.registerIcon("blockhammer:" + this.getUnlocalizedName().substring(5));
+		this.itemIcon = par1IconRegister.registerIcon("fantasykingdoms:" + this.getUnlocalizedName().substring(5));
 	}
 }

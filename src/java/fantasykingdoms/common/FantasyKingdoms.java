@@ -13,7 +13,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
-@Mod(modid = "fantasykingdoms", name = "Dwarven Kingdoms", version = "1.0.0", dependencies = "required-after:boilerplate")
+@Mod(modid = "fantasykingdoms", name = "Fantast Kingdoms", version = "1.0.0", dependencies = "required-after:boilerplate")
 public class FantasyKingdoms
 {
 	public static Fluid beerFluid;
