@@ -14,7 +14,7 @@ public class ItemEmptyTankard extends BaseItem
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float px, float py, float pz)
 	{
-		if (world.getBlock(x, y, z) == FantasyKingdoms.blockBeer)
+		if (world.getBlock(x, y, z) == FantasyKingdoms.blockBarrel)
 		{
 			player.destroyCurrentEquippedItem();
 			player.inventory.addItemStackToInventory(new ItemStack(FantasyKingdoms.itemEmptyTankard));

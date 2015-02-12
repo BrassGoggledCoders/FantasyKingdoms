@@ -17,7 +17,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 public class FantasyKingdoms
 {
 	public static Fluid beerFluid;
-	public static Block blockBeer;
+	public static Block blockBeer, blockBarrel;
 
 	public static Item itemEmptyTankard, itemFullTankard;
 
@@ -38,6 +38,9 @@ public class FantasyKingdoms
 		blockBeer = new BlockFluidBeer(beerFluid, Material.water).setBlockName("beerFluidBlock");
 
 		GameRegistry.registerBlock(blockBeer, "blockbeer");
+
+		blockBarrel = new BlockBarrel(Material.wood);
+		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");
 
 		// Items
 		itemEmptyTankard = new ItemEmptyTankard().setUnlocalizedName("itemEmptyTankard");
