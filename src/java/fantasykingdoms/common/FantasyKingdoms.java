@@ -11,6 +11,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import fantasykingdoms.common.blocks.BlockBarrel;
+import fantasykingdoms.common.blocks.BlockExplosiveBarrel;
 import fantasykingdoms.common.blocks.BlockFluidBeer;
 import fantasykingdoms.common.blocks.FluidBeer;
 import fantasykingdoms.common.items.ItemEmptyTankard;
@@ -23,7 +24,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 public class FantasyKingdoms
 {
 	public static Fluid beerFluid;
-	public static Block blockBeer, blockBarrel;
+	public static Block blockBeer, blockBarrel, blockExplosiveBarrel;
 
 	public static Item itemEmptyTankard, itemFullTankard;
 
@@ -47,6 +48,9 @@ public class FantasyKingdoms
 
 		blockBarrel = new BlockBarrel(Material.wood);
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");
+
+		blockExplosiveBarrel = new BlockExplosiveBarrel(Material.wood);
+		GameRegistry.registerBlock(blockExplosiveBarrel, "BlockExplosiveBarrel");
 
 		// Items
 		itemEmptyTankard = new ItemEmptyTankard().setUnlocalizedName("itemEmptyTankard");
