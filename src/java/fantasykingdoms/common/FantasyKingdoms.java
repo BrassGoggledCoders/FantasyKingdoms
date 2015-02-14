@@ -10,6 +10,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+import fantasykingdoms.common.blocks.BaseBlock;
 import fantasykingdoms.common.blocks.BlockBarrel;
 import fantasykingdoms.common.blocks.BlockExplosiveBarrel;
 import fantasykingdoms.common.blocks.BlockFluidBeer;
@@ -25,6 +26,7 @@ public class FantasyKingdoms
 {
 	public static Fluid beerFluid;
 	public static Block blockBeer, blockBarrel, blockExplosiveBarrel;
+	public static Block blockRubyOre, blockSapphireOre, blockAmethystOre, blockCopperOre, blockTinOre, blockSilverOre;
 
 	public static Item itemEmptyTankard, itemFullTankard;
 
@@ -37,6 +39,19 @@ public class FantasyKingdoms
 		LanguageRegistry.instance().getStringLocalization("itemGroup.fantasykingdoms", "en_US");
 
 		// Blocks
+		blockRubyOre = new BaseBlock(Material.rock).setBlockName("blockRubyOre");
+		GameRegistry.registerBlock(blockRubyOre, "BlockRubyOre");
+		blockSapphireOre = new BaseBlock(Material.rock).setBlockName("blockSapphireOre");
+		GameRegistry.registerBlock(blockSapphireOre, "BlockSapphireOre");
+		blockAmethystOre = new BaseBlock(Material.rock).setBlockName("blockAmethystOre");
+		GameRegistry.registerBlock(blockAmethystOre, "BlockAmethystOre");
+		blockCopperOre = new BaseBlock(Material.rock).setBlockName("blockCopperOre");
+		GameRegistry.registerBlock(blockCopperOre, "BlockCopperOre");
+		blockTinOre = new BaseBlock(Material.rock).setBlockName("blockTinOre");
+		GameRegistry.registerBlock(blockTinOre, "BlockTinOre");
+		blockSilverOre = new BaseBlock(Material.rock).setBlockName("blockSilverOre");
+		GameRegistry.registerBlock(blockSilverOre, "BlockSilverOre");
+
 		beerFluid = new FluidBeer("beer").setUnlocalizedName("beerFluid");
 
 		if (!FluidRegistry.registerFluid(beerFluid) && !FluidRegistry.isFluidRegistered("beer"))
@@ -44,7 +59,7 @@ public class FantasyKingdoms
 
 		blockBeer = new BlockFluidBeer(beerFluid, Material.water).setBlockName("beerFluidBlock");
 
-		GameRegistry.registerBlock(blockBeer, "blockbeer");
+		GameRegistry.registerBlock(blockBeer, "blockBeer");
 
 		blockBarrel = new BlockBarrel(Material.wood);
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");
