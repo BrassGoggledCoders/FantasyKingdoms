@@ -12,7 +12,6 @@
  */
 package fantasykingdoms.common.blocks;
 
-import fantasykingdoms.common.Reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -28,35 +27,27 @@ import cpw.mods.fml.relauncher.SideOnly;
  */
 public class BaseBlock extends Block
 {
-	public BaseBlock(Material material)
+	public BaseBlock(Material mat)
 	{
-		super(material);
+		super(mat);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(0.5F);
 	}
 
-    //@Override
-    public String getUnlocalisedName()
-    {
-        return String.format("tile.%s%s", Reference.MODID.toLowerCase() + ":", getUnwrappedUnlocalisedName
-                (super.getUnlocalizedName()));
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister ir)
+	{
+		this.blockIcon = ir.registerIcon("fantasykingdoms:" + this.getUnlocalizedName().substring(5));
+	}
 
 	/**
 	 * Gets the block's texture. Args: side, meta
 	 */
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
-        blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalisedName(this.getUnlocalizedName())));
-    }
-
-
-    protected String getUnwrappedUnlocalisedName(String unlocalisedName)
-    {
-        return unlocalisedName.substring(unlocalisedName.indexOf(".") + 1);
-    }
-
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+	{
+		return this.blockIcon;
+	}
 }
