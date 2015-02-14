@@ -3,6 +3,12 @@
 #Blocks
 tile.blockBarrel.name=Beer Barrel
 tile.blockExplosiveBarrel.name=Runebeard’s XXX
+tile.blockRubyOre.name=Ruby Ore
+tile.blockSapphireOre.name=Sapphire Ore
+tile.blockAmethystOre.name=Amethyst Ore
+tile.blockCopperOre.name=Copper Ore
+tile.blockTinOre.name=Tin Ore
+tile.blockSilverOre.name=Silver Ore
 #Items
 item.itemEmptyTankard.name=Empty Tankard
 item.itemFullTankard.name=Tankard of Beer
