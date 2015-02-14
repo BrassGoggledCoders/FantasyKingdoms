@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -22,6 +23,7 @@ import fantasykingdoms.common.items.ItemTankard;
 
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = "fantasykingdoms", name = "Fantast Kingdoms", version = "1.0.0")
 public class FantasyKingdoms
@@ -82,6 +84,20 @@ public class FantasyKingdoms
 		GameRegistry.registerItem(itemSapphire, "ItemSapphire");
 		itemAmethyst = new BaseItem().setUnlocalizedName("itemAmethyst");
 		GameRegistry.registerItem(itemAmethyst, "ItemAmethyst");
+	}
+
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		OreDictionary.registerOre("oreRuby", blockRubyOre);
+		OreDictionary.registerOre("oreSapphire", blockSapphireOre);
+		OreDictionary.registerOre("oreAmethyst", blockAmethystOre);
+		OreDictionary.registerOre("oreCopper", blockCopperOre);
+		OreDictionary.registerOre("oreTin", blockTinOre);
+		OreDictionary.registerOre("oreSilver", blockSilverOre);
+		OreDictionary.registerOre("gemRuby", itemRuby);
+		OreDictionary.registerOre("gemSapphire", itemSapphire);
+		OreDictionary.registerOre("gemAmethyst", itemAmethyst);
 	}
 
 	@Mod.EventHandler
