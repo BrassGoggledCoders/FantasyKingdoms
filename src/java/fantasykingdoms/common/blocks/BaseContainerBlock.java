@@ -9,9 +9,9 @@ import net.minecraft.world.World;
 public abstract class BaseContainerBlock extends BaseBlock implements ITileEntityProvider
 {
 
-	public BaseContainerBlock(Material mat)
+	public BaseContainerBlock(Material material)
 	{
-		super(mat);
+		super(material);
 		this.isBlockContainer = true;
 	}
 

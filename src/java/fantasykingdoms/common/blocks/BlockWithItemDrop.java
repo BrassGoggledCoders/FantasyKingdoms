@@ -9,9 +9,9 @@ public class BlockWithItemDrop extends BaseBlock
 {
 	Item itemToDrop;
 
-	public BlockWithItemDrop(Material mat, Item itemToDrop)
+	public BlockWithItemDrop(Material material, Item itemToDrop)
 	{
-		super(mat);
+		super(material);
 		this.itemToDrop = itemToDrop;
 	}
 
