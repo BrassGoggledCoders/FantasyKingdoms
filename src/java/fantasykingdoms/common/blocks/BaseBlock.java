@@ -27,9 +27,9 @@ import cpw.mods.fml.relauncher.SideOnly;
  */
 public class BaseBlock extends Block
 {
-	public BaseBlock(Material mat)
+	public BaseBlock(Material material)
 	{
-		super(mat);
+		super(material);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(0.5F);
 	}

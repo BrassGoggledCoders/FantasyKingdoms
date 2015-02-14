@@ -16,9 +16,9 @@ public class BlockBarrel extends BaseContainerBlock
 	@SideOnly(Side.CLIENT)
 	private IIcon iconTop, iconBottom;
 
-	public BlockBarrel(Material mat)
+	public BlockBarrel(Material material)
 	{
-		super(mat);
+		super(material);
 	}
 
 	@Override

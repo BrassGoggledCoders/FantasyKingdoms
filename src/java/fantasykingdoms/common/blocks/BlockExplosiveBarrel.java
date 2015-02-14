@@ -16,9 +16,9 @@ import net.minecraft.world.World;
 public class BlockExplosiveBarrel extends BaseBlock
 {
 
-	public BlockExplosiveBarrel(Material mat)
+	public BlockExplosiveBarrel(Material material)
 	{
-		super(mat);
+		super(material);
 
 	}
 
