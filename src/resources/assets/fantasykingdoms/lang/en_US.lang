@@ -1,0 +1,8 @@
+#NB: for custom thingies StatCollector.translateToLocal(String);
+
+#Blocks
+tile.blockBarrel.name=Beer Barrel
+tile.blockExplosiveBarrel.name=Runebeard’s XXX
+#Items
+item.itemEmptyTankard.name=Empty Tankard
+item.itemFullTankard.name=Tankard of Beer
