@@ -14,17 +14,16 @@ package fantasykingdoms.common.items;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import boilerplate.common.baseclasses.RootItem;
 
 /**
  * @author warlordjones
  * 
  */
-public class BaseItem extends RootItem
+public class BaseItem extends Item
 {
 	public BaseItem()
 	{
