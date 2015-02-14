@@ -14,7 +14,9 @@ import fantasykingdoms.common.blocks.BaseBlock;
 import fantasykingdoms.common.blocks.BlockBarrel;
 import fantasykingdoms.common.blocks.BlockExplosiveBarrel;
 import fantasykingdoms.common.blocks.BlockFluidBeer;
+import fantasykingdoms.common.blocks.BlockWithItemDrop;
 import fantasykingdoms.common.blocks.FluidBeer;
+import fantasykingdoms.common.items.BaseItem;
 import fantasykingdoms.common.items.ItemEmptyTankard;
 import fantasykingdoms.common.items.ItemTankard;
 
@@ -29,6 +31,7 @@ public class FantasyKingdoms
 	public static Block blockRubyOre, blockSapphireOre, blockAmethystOre, blockCopperOre, blockTinOre, blockSilverOre;
 
 	public static Item itemEmptyTankard, itemFullTankard;
+	public static Item itemRuby, itemSapphire, itemAmethyst;
 
 	@Mod.Instance("fantasykingdoms")
 	public static FantasyKingdoms instance;
@@ -39,11 +42,11 @@ public class FantasyKingdoms
 		LanguageRegistry.instance().getStringLocalization("itemGroup.fantasykingdoms", "en_US");
 
 		// Blocks
-		blockRubyOre = new BaseBlock(Material.rock).setBlockName("blockRubyOre");
+		blockRubyOre = new BlockWithItemDrop(Material.rock, itemRuby).setBlockName("blockRubyOre");
 		GameRegistry.registerBlock(blockRubyOre, "BlockRubyOre");
-		blockSapphireOre = new BaseBlock(Material.rock).setBlockName("blockSapphireOre");
+		blockSapphireOre = new BlockWithItemDrop(Material.rock, itemSapphire).setBlockName("blockSapphireOre");
 		GameRegistry.registerBlock(blockSapphireOre, "BlockSapphireOre");
-		blockAmethystOre = new BaseBlock(Material.rock).setBlockName("blockAmethystOre");
+		blockAmethystOre = new BlockWithItemDrop(Material.rock, itemAmethyst).setBlockName("blockAmethystOre");
 		GameRegistry.registerBlock(blockAmethystOre, "BlockAmethystOre");
 		blockCopperOre = new BaseBlock(Material.rock).setBlockName("blockCopperOre");
 		GameRegistry.registerBlock(blockCopperOre, "BlockCopperOre");
@@ -72,6 +75,13 @@ public class FantasyKingdoms
 		itemFullTankard = new ItemTankard().setUnlocalizedName("itemFullTankard");
 		GameRegistry.registerItem(itemEmptyTankard, "ItemEmptyTankard");
 		GameRegistry.registerItem(itemFullTankard, "ItemFullTankard");
+
+		itemRuby = new BaseItem().setUnlocalizedName("itemRuby");
+		GameRegistry.registerItem(itemRuby, "ItemRuby");
+		itemSapphire = new BaseItem().setUnlocalizedName("itemSapphire");
+		GameRegistry.registerItem(itemSapphire, "ItemSapphire");
+		itemAmethyst = new BaseItem().setUnlocalizedName("itemAmethyst");
+		GameRegistry.registerItem(itemAmethyst, "ItemAmethyst");
 	}
 
 	@Mod.EventHandler
