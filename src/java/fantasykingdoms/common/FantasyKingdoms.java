@@ -64,10 +64,10 @@ public class FantasyKingdoms
 
 		GameRegistry.registerBlock(blockBeer, "blockBeer");
 
-		blockBarrel = new BlockBarrel(Material.wood);
+		blockBarrel = new BlockBarrel(Material.wood).setBlockName("blockBarrel");
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");
 
-		blockExplosiveBarrel = new BlockExplosiveBarrel(Material.wood);
+		blockExplosiveBarrel = new BlockExplosiveBarrel(Material.wood).setBlockName("blockExplosiveBarrel");
 		GameRegistry.registerBlock(blockExplosiveBarrel, "BlockExplosiveBarrel");
 
 		// Items
