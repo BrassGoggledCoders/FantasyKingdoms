@@ -1,5 +1,6 @@
 package fantasykingdoms.common;
 
+import fantasykingdoms.common.Reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -25,7 +26,8 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
-@Mod(modid = "fantasykingdoms", name = "Fantast Kingdoms", version = "1.0.0")
+@Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version)
+
 public class FantasyKingdoms
 {
 	public static Fluid beerFluid;
