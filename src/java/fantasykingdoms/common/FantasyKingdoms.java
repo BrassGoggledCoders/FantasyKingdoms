@@ -20,7 +20,7 @@ import fantasykingdoms.common.items.ItemTankard;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
-@Mod(modid = "fantasykingdoms", name = "Fantast Kingdoms", version = "1.0.0", dependencies = "required-after:boilerplate")
+@Mod(modid = "fantasykingdoms", name = "Fantast Kingdoms", version = "1.0.0")
 public class FantasyKingdoms
 {
 	public static Fluid beerFluid;
