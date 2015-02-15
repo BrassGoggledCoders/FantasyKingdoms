@@ -1,6 +1,8 @@
 package fantasykingdoms.common;
 
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import fantasykingdoms.common.Reference.Reference;
+import fantasykingdoms.common.Util.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -36,6 +38,8 @@ public class FantasyKingdoms
 
 	public static Item itemEmptyTankard, itemFullTankard;
 	public static Item itemRuby, itemSapphire, itemAmethyst;
+
+    public static boolean Client;
 
 	@Mod.Instance("fantasykingdoms")
 	public static FantasyKingdoms instance;
@@ -86,6 +90,8 @@ public class FantasyKingdoms
 		GameRegistry.registerItem(itemSapphire, "ItemSapphire");
 		itemAmethyst = new BaseItem().setUnlocalizedName("itemAmethyst");
 		GameRegistry.registerItem(itemAmethyst, "ItemAmethyst");
+
+        LogHelper.info("Pre-Initilisation completed successfully");
 	}
 
 	@Mod.EventHandler
@@ -100,7 +106,19 @@ public class FantasyKingdoms
 		OreDictionary.registerOre("gemRuby", itemRuby);
 		OreDictionary.registerOre("gemSapphire", itemSapphire);
 		OreDictionary.registerOre("gemAmethyst", itemAmethyst);
+
+        LogHelper.info("Initilisation completed successfully");
 	}
+
+    public void postInit(FMLPostInitializationEvent event)
+    {
+        LogHelper.info("Post-Initilisation completed successfully");
+    }
+    public static void Client()
+    {
+        if(Client) return;
+        Client = true;
+    }
 
 	@Mod.EventHandler
 	public void serverStart(FMLServerStartingEvent event)
