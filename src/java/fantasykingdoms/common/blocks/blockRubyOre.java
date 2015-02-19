@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class blockRubyOre extends BlockGemstoneOre
 {
-    public BlockRubyOre()
+    public blockRubyOre()
     {
         super();
         this.setBlockName("RubyOre");

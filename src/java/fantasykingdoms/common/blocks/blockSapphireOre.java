@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class blockSapphireOre extends BlockGemstoneOre
 {
-    public BlockSapphireOre()
+    public blockSapphireOre()
     {
         super();
         this.setBlockName("SapphireOre");
