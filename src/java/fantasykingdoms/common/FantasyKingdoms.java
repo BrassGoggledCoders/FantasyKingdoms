@@ -1,8 +1,7 @@
 package fantasykingdoms.common;
 
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import fantasykingdoms.common.Reference.Reference;
-import fantasykingdoms.common.Util.LogHelper;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -23,6 +22,8 @@ import fantasykingdoms.common.blocks.FluidBeer;
 import fantasykingdoms.common.items.BaseItem;
 import fantasykingdoms.common.items.ItemEmptyTankard;
 import fantasykingdoms.common.items.ItemTankard;
+import fantasykingdoms.common.reference.Reference;
+import fantasykingdoms.common.util.LogHelper;
 
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;

@@ -1,4 +1,4 @@
-package fantasykingdoms.common.Reference;
+package fantasykingdoms.common.reference;
 /**
  * Created by Toby on 14/02/2015.
  */
