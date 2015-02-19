@@ -4,6 +4,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import fantasykingdoms.common.CommandMagic;
 import fantasykingdoms.common.Reference.Reference;
 import fantasykingdoms.common.Util.LogHelper;
 import fantasykingdoms.common.blocks.OreDictionary;
@@ -37,6 +39,11 @@ public class FantasyKingdoms
     public void postInit(FMLPostInitializationEvent event)
     {
         LogHelper.info("Post-Initilisation successfully completed");
+    }
+
+    public void serverStart(FMLServerStartingEvent event)
+    {
+        event.registerServerCommand(new CommandMagic());
     }
 
     public static void Client()
