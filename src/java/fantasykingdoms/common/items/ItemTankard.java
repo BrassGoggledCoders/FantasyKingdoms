@@ -1,7 +1,6 @@
 package fantasykingdoms.common.items;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -28,15 +27,5 @@ public class ItemTankard extends BaseItem
 
 		}
 		return stack;
-	}
-
-	/**
-	 * returns the action that specifies what animation to play when the items
-	 * is being used
-	 */
-	@Override
-	public EnumAction getItemUseAction(ItemStack p_77661_1_)
-	{
-		return EnumAction.drink;
 	}
 }
