@@ -1,13 +1,17 @@
 package fantasykingdoms.common.blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fantasykingdoms.common.tiles.TileBarrel;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+import fantasykingdoms.common.tiles.TileBarrel;
 
 public class BlockBarrel extends BaseContainerBlock
 {
@@ -48,7 +52,23 @@ public class BlockBarrel extends BaseContainerBlock
 	{
 		this.blockIcon = icon.registerIcon("fantasykingdoms:blockBarrelSide");
 		this.iconTop = icon.registerIcon("fantasykingdoms:blockBarrelEndFull");
-		this.iconBottom = icon.registerIcon("fantasykingdoms:blockEndBarrelClosed");
+		this.iconBottom = icon.registerIcon("fantasykingdoms:blockBarrelEndClosed");
+	}
+
+	/**
+	 * Called upon block activation (right click on the block.)
+	 */
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float px, float py, float pz)
+	{
+		TileBarrel tile = (TileBarrel) world.getTileEntity(x, y, z);
+		if (player.inventory.consumeInventoryItem(Items.wheat) && tile.getBeerType() == "empty")
+		{
+			tile.setBeerType("normal");
+			tile.setFermentationTime(100);
+			return true;
+		}
+		return false;
 	}
 
 }
