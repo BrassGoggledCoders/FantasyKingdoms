@@ -24,6 +24,10 @@ public class ItemEmptyTankard extends BaseItem
 		if (world.getBlock(x, y, z) == FantasyKingdoms.blockBarrel && tile.getBeerType() != "empty" && tile.getBeerLevel() > 0)
 		{
 			tile.setBeerLevel(tile.getBeerLevel() - 1);
+			if (tile.getBeerLevel() == 0)
+			{
+				tile.setBeerType("empty");
+			}
 			player.destroyCurrentEquippedItem();
 			player.inventory.addItemStackToInventory(new ItemStack(FantasyKingdoms.itemFullTankard));
 			return true;
