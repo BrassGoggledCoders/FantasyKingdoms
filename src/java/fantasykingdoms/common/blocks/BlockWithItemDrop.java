@@ -1,9 +1,9 @@
 package fantasykingdoms.common.blocks;
 
+import java.util.Random;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-
-import java.util.Random;
 
 public class BlockWithItemDrop extends BaseBlock
 {

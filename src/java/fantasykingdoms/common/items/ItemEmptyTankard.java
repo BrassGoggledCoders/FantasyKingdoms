@@ -4,8 +4,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import fantasykingdoms.common.Mod.FantasyKingdoms;
-
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.tiles.TileBarrel;
 

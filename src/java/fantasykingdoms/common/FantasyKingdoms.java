@@ -1,20 +1,27 @@
 package fantasykingdoms.common;
 
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import fantasykingdoms.common.blocks.*;
+
+import fantasykingdoms.common.blocks.BaseBlock;
+import fantasykingdoms.common.blocks.BlockBarrel;
+import fantasykingdoms.common.blocks.BlockExplosiveBarrel;
+import fantasykingdoms.common.blocks.BlockFluidBeer;
+import fantasykingdoms.common.blocks.BlockWithItemDrop;
+import fantasykingdoms.common.blocks.FluidBeer;
 import fantasykingdoms.common.items.BaseItem;
 import fantasykingdoms.common.items.ItemEmptyTankard;
 import fantasykingdoms.common.items.ItemTankard;
-import fantasykingdoms.common.Reference.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
+
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;

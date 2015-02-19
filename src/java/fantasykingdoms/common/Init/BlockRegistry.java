@@ -1,8 +1,17 @@
-package fantasykingdoms.common.Init;
+package fantasykingdoms.common.init;
+
+import net.minecraft.block.material.Material;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import fantasykingdoms.common.blocks.*;
-import net.minecraft.block.material.Material;
+
+import fantasykingdoms.common.blocks.BaseBlock;
+import fantasykingdoms.common.blocks.BlockGemstoneOre;
+import fantasykingdoms.common.blocks.BlockOreFK;
+import fantasykingdoms.common.blocks.blockAmethystOre;
+import fantasykingdoms.common.blocks.blockCopperOre;
+import fantasykingdoms.common.blocks.blockRubyOre;
+import fantasykingdoms.common.blocks.blockSapphireOre;
+import fantasykingdoms.common.blocks.blockTinOre;
 
 public class BlockRegistry
 {

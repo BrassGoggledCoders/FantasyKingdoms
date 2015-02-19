@@ -1,3 +1,4 @@
+package fantasykingdoms.common.mod;
 /*
 package fantasykingdoms.common.Mod;
 

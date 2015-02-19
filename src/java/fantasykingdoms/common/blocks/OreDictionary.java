@@ -1,6 +1,5 @@
 package fantasykingdoms.common.blocks;
 
-import fantasykingdoms.common.Init.BlockRegistry;
 
 public class OreDictionary extends net.minecraftforge.oredict.OreDictionary
 {
