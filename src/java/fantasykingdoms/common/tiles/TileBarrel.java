@@ -3,12 +3,10 @@ package fantasykingdoms.common.tiles;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
-import cpw.mods.fml.common.FMLLog;
-
 public class TileBarrel extends TileEntity
 {
 	private int beerLevel = 0;
-	private String beerType = "normal";
+	private String beerType = "empty";
 	private int fermentationTime = 0;
 
 	public TileBarrel()
@@ -55,16 +53,14 @@ public class TileBarrel extends TileEntity
 	@Override
 	public void updateEntity()
 	{
-		FMLLog.fine("", "Fermentation Time: " + fermentationTime);
-		FMLLog.fine("", "Beer Level: " + beerLevel);
-		FMLLog.fine("", "Beer Type: " + beerType);
 		if (fermentationTime > 0)
 		{
 			fermentationTime--;
 		}
 		else
 		{
-			setBeerLevel(10);
+			if (beerType == "normal")
+				setBeerLevel(10);
 		}
 	}
 
