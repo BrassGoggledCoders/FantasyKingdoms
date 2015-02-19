@@ -11,6 +11,7 @@ public class ItemEmptyTankard extends BaseItem
 	public ItemEmptyTankard()
 	{
 		this.setMaxStackSize(1);
+		this.setFull3D();
 	}
 
 	@Override
