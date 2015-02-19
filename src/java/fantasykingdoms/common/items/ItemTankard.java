@@ -6,7 +6,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-import fantasykingdoms.common.FantasyKingdoms;
+import fantasykingdoms.common.Mod.FantasyKingdoms;
 
 public class ItemTankard extends BaseItem
 {
