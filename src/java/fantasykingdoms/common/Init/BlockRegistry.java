@@ -1,17 +1,7 @@
-package fantasykingdoms.common.init;
-
-import net.minecraft.block.material.Material;
+package fantasykingdoms.common.Init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-
-import fantasykingdoms.common.blocks.BaseBlock;
-import fantasykingdoms.common.blocks.BlockGemstoneOre;
-import fantasykingdoms.common.blocks.BlockOreFK;
-import fantasykingdoms.common.blocks.blockAmethystOre;
-import fantasykingdoms.common.blocks.blockCopperOre;
-import fantasykingdoms.common.blocks.blockRubyOre;
-import fantasykingdoms.common.blocks.blockSapphireOre;
-import fantasykingdoms.common.blocks.blockTinOre;
+import fantasykingdoms.common.blocks.*;
 
 public class BlockRegistry
 {
@@ -22,6 +12,7 @@ public class BlockRegistry
 
     public static final BlockOreFK CopperOre = new blockCopperOre();
     public static final BlockOreFK TinOre = new blockTinOre();
+    public static final BlockOreFK SilverOre = new blockSilverOre();
 
     public static void registerBlocks()
     {
@@ -30,7 +21,6 @@ public class BlockRegistry
         GameRegistry.registerBlock(AmethystOre, "BlockAmethystOre");
         GameRegistry.registerBlock(CopperOre, "BlockCopperOre");
         GameRegistry.registerBlock(TinOre, "BlockTinOre");
-        blockSilverOre = new BaseBlock(Material.rock).setBlockName("blockSilverOre");
-        GameRegistry.registerBlock(blockSilverOre, "BlockSilverOre");
+        GameRegistry.registerBlock(SilverOre, "BlockSilverOre");
     }
 }

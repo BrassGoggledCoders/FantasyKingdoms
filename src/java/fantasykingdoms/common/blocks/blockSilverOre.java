@@ -7,6 +7,8 @@ public class blockSilverOre extends BlockOreFK
     public blockSilverOre()
     {
         super();
+        this.setBlockName("SilverOre");
+        this.setHarvestLevel("pickaxe", 2);
 
     }
 }

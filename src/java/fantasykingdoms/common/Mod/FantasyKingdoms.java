@@ -1,5 +1,3 @@
-package fantasykingdoms.common.mod;
-/*
 package fantasykingdoms.common.Mod;
 
 import cpw.mods.fml.common.Mod;
@@ -54,4 +52,3 @@ public class FantasyKingdoms
         Client = true;
     }
 }
-*/

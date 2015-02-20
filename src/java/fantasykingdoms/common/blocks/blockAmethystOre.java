@@ -1,10 +1,10 @@
 package fantasykingdoms.common.blocks;
 
-import java.util.Random;
-
+import fantasykingdoms.common.Init.BlockRegistry;
+import fantasykingdoms.common.Init.ItemRegistry;
 import net.minecraft.item.Item;
 
-import fantasykingdoms.common.init.BlockRegistry;
+import java.util.Random;
 
 /**
  * Created by Toby on 19/02/2015.
@@ -20,6 +20,6 @@ public class blockAmethystOre extends BlockGemstoneOre
 
     public Item getItemDropped(int i, Random random, int j)
     {
-        return this == BlockRegistry.RubyOre ? ItemRegistry.Amethyst : Item.getItemFromBlock(this);
+        return this == BlockRegistry.RubyOre ? ItemRegistry.itemAmethyst : Item.getItemFromBlock(this);
     }
 }
