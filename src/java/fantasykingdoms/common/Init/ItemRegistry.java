@@ -15,7 +15,7 @@ public class ItemRegistry
     public static final BaseItem itemSapphire = new itemSapphire();
     public static final BaseItem itemAmethyst = new itemAmethyst();
 
-    public static void init()
+    public static void registerItems()
     {
         GameRegistry.registerItem(itemRuby, "itemRuby");
         GameRegistry.registerItem(itemSapphire, "itemSapphire");
