@@ -21,12 +21,13 @@ import fantasykingdoms.common.blocks.FluidBeer;
 import fantasykingdoms.common.items.BaseItem;
 import fantasykingdoms.common.items.ItemEmptyTankard;
 import fantasykingdoms.common.items.ItemTankard;
+import fantasykingdoms.common.Reference.*;
 
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
-@Mod(modid = fantasykingdoms.common.Reference.MODID, name = fantasykingdoms.common.reference.Reference.Name, version = fantasykingdoms.common.reference.Reference.Version)
+@Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version)
 
 public class FantasyKingdoms
 {
