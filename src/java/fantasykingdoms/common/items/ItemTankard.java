@@ -1,11 +1,12 @@
 package fantasykingdoms.common.items;
 
-import fantasykingdoms.common.Init.ItemRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+
+import fantasykingdoms.common.init.ItemRegistry;
 
 public class ItemTankard extends BaseItem
 {

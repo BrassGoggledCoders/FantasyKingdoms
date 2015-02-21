@@ -1,10 +1,11 @@
 package fantasykingdoms.common.blocks;
 
-import fantasykingdoms.common.Init.BlockRegistry;
-import fantasykingdoms.common.Init.ItemRegistry;
+import java.util.Random;
+
 import net.minecraft.item.Item;
 
-import java.util.Random;
+import fantasykingdoms.common.init.BlockRegistry;
+import fantasykingdoms.common.init.ItemRegistry;
 
 /**
  * Created by Toby on 19/02/2015.

@@ -1,11 +1,12 @@
 package fantasykingdoms.common.items;
 
-import fantasykingdoms.common.Init.BlockRegistry;
-import fantasykingdoms.common.Init.ItemRegistry;
-import fantasykingdoms.common.tiles.TileBarrel;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import fantasykingdoms.common.init.BlockRegistry;
+import fantasykingdoms.common.init.ItemRegistry;
+import fantasykingdoms.common.tiles.TileBarrel;
 
 public class ItemEmptyTankard extends BaseItem
 {
