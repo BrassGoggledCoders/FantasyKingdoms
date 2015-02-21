@@ -12,7 +12,7 @@ import fantasykingdoms.common.util.LogHelper;
 import fantasykingdoms.common.util.OreDictionaryHandler;
 import fantasykingdoms.common.util.Reference;
 
-@Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version)
+@Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version, dependencies = "required-after:boilerplate")
 public class FantasyKingdoms
 {
 
