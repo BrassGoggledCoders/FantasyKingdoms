@@ -5,15 +5,21 @@ import net.minecraft.tileentity.TileEntity;
 
 import cpw.mods.fml.common.FMLLog;
 
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidTank;
+
 public class TileBarrel extends TileEntity
 {
 	private int beerLevel = 0;
 	private String beerType = "empty";
 	private int fermentationTime = 0;
+	public FluidTank waterTank;
 
 	public TileBarrel()
 	{
-
+		super();
+		this.waterTank = new FluidTank(new FluidStack(FluidRegistry.WATER, 0), 5000);
 	}
 
 	@Override
@@ -22,6 +28,7 @@ public class TileBarrel extends TileEntity
 		this.setBeerLevel(nbt.getInteger("beerLevel"));
 		this.setBeerType(nbt.getString("beerType"));
 		this.setFermentationTime(nbt.getInteger("fermentationTime"));
+		this.waterTank.setFluid(new FluidStack(FluidRegistry.getFluid("water"), nbt.getShort("waterLevel")));
 	}
 
 	@Override
@@ -30,6 +37,7 @@ public class TileBarrel extends TileEntity
 		nbt.setInteger("beerLevel", getBeerLevel());
 		nbt.setString("beerType", getBeerType());
 		nbt.setInteger("fermentationTime", getFermentationTime());
+		nbt.setShort("waterLevel", (short) this.waterTank.getFluidAmount());
 	}
 
 	public int getFermentationTime()
@@ -60,10 +68,17 @@ public class TileBarrel extends TileEntity
 			FMLLog.info("Time: " + fermentationTime, "");
 			FMLLog.info("Type: " + beerType, "");
 			FMLLog.info("Level: " + beerLevel, "");
-			if (fermentationTime > 0 && beerType != "empty")
-				fermentationTime--;
-			else
-				beerLevel = 10;
+
+			while (fermentationTime >= 0 && beerType != "empty")
+			{
+				if (fermentationTime > 0)
+					fermentationTime--;
+				else
+				{
+					beerLevel = 10;
+					break;
+				}
+			}
 		}
 	}
 
