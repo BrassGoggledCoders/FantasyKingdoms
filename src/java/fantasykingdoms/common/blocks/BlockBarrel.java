@@ -20,7 +20,9 @@ public class BlockBarrel extends BaseContainerBlock
 
 	public BlockBarrel(Material material)
 	{
-		super(material);
+		super(Material.wood);
+        this.setBlockName("blockBarrel");
+
 	}
 
 	@Override

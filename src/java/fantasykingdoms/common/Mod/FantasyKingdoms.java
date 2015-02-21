@@ -7,11 +7,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import fantasykingdoms.common.CommandMagic;
-import fantasykingdoms.common.Init.BlockRegistry;
 import fantasykingdoms.common.Init.ItemRegistry;
 import fantasykingdoms.common.Reference.Reference;
 import fantasykingdoms.common.Util.LogHelper;
-import fantasykingdoms.common.blocks.OreDictionary;
 
 @Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version)
 public class FantasyKingdoms
@@ -29,14 +27,14 @@ public class FantasyKingdoms
         LanguageRegistry.instance().getStringLocalization("itemGroup.fantasykingdoms", "en_US");
 
         ItemRegistry.registerItems();
-        BlockRegistry.registerBlocks();
+//        BlockRegistry.registerBlocks();
         LogHelper.info("Pre-Initilisation successfully completed");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        OreDictionary.registerOre();
+        //OreDictionary.registerOre();
 
         LogHelper.info("Initilisation successfully completed");
     }
@@ -47,14 +45,14 @@ public class FantasyKingdoms
         LogHelper.info("Post-Initilisation successfully completed");
     }
 
-    public void serverStart(FMLServerStartingEvent event)
-    {
-        event.registerServerCommand(new CommandMagic());
-    }
-
     public static void Client()
     {
      if(Client) return;
         Client = true;
+    }
+
+    public void serverStart(FMLServerStartingEvent event)
+    {
+        event.registerServerCommand(new CommandMagic());
     }
 }
