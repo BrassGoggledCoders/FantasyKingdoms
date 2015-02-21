@@ -10,5 +10,8 @@ tile.blockCopperOre.name=Copper Ore
 tile.blockTinOre.name=Tin Ore
 tile.blockSilverOre.name=Silver Ore
 #Items
+item.itemRuby.name=Ruby
+item.itemAmethyst.name=Amethyst
+item.itemSapphire.name=Sapphire
 item.itemEmptyTankard.name=Empty Tankard
 item.itemFullTankard.name=Tankard of Beer
