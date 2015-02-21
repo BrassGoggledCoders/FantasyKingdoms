@@ -1,44 +1,59 @@
-/*
 package fantasykingdoms.common;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import fantasykingdoms.common.Reference.Reference;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraftforge.fluids.Fluid;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+import fantasykingdoms.common.init.InitItems;
+import fantasykingdoms.common.util.LogHelper;
+import fantasykingdoms.common.util.Reference;
 
 @Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version)
-
 public class FantasyKingdoms
 {
-    public static Fluid beerFluid;
-    public static Block blockBeer, blockBarrel, blockExplosiveBarrel;
 
-    public static Item itemEmptyTankard, itemFullTankard;
+	public static boolean Client;
 
-    @Mod.Instance("fantasykingdoms")
-    public static FantasyKingdoms modInstance;
+	@Mod.Instance("FantasyKingdoms")
+	public static FantasyKingdoms modInstance;
 
-    @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
+	@Mod.EventHandler
+	public void preInit(FMLPreInitializationEvent event)
+	{
 
-        GameRegistry.registerBlock(blockExplosiveBarrel, "BlockExplosiveBarrel");
-    }
+		LanguageRegistry.instance().getStringLocalization("itemGroup.fantasykingdoms", "en_US");
 
-    @Mod.EventHandler
-    public void init(FMLInitializationEvent event)
-    {
+		InitItems.registerItems();
+		// BlockRegistry.registerBlocks();
+		LogHelper.info("Pre-Initilisation successfully completed");
+	}
 
-    }
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		// OreDictionary.registerOre();
 
-    @Mod.EventHandler
-    public void serverStart(FMLServerStartingEvent event)
-    {
-        event.registerServerCommand(new CommandMagic());
-    }
-}*/
+		LogHelper.info("Initilisation successfully completed");
+	}
+
+	@Mod.EventHandler
+	public void postInit(FMLPostInitializationEvent event)
+	{
+		LogHelper.info("Post-Initilisation successfully completed");
+	}
+
+	public static void Client()
+	{
+		if (Client)
+			return;
+		Client = true;
+	}
+
+	public void serverStart(FMLServerStartingEvent event)
+	{
+		event.registerServerCommand(new CommandMagic());
+	}
+}

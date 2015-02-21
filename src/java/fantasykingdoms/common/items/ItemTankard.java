@@ -6,7 +6,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-import fantasykingdoms.common.init.ItemRegistry;
+import fantasykingdoms.common.init.InitItems;
 
 public class ItemTankard extends BaseItem
 {
@@ -22,7 +22,7 @@ public class ItemTankard extends BaseItem
 		player.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 50, 100));
 		player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 50, 100));
 		player.destroyCurrentEquippedItem();
-		player.inventory.addItemStackToInventory(new ItemStack(ItemRegistry.itemEmptyTankard));
+		player.inventory.addItemStackToInventory(new ItemStack(InitItems.itemEmptyTankard));
 		return stack;
 	}
 }
