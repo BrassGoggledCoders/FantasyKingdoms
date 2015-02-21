@@ -5,7 +5,10 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import fantasykingdoms.common.CommandMagic;
+import fantasykingdoms.common.Init.BlockRegistry;
+import fantasykingdoms.common.Init.ItemRegistry;
 import fantasykingdoms.common.Reference.Reference;
 import fantasykingdoms.common.Util.LogHelper;
 import fantasykingdoms.common.blocks.OreDictionary;
@@ -17,13 +20,16 @@ public class FantasyKingdoms
     public static boolean Client;
 
     @Mod.Instance("FantasyKingdoms")
-    public static FantasyKingdoms instance;
+    public static FantasyKingdoms modInstance;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        //TODO: Sort out language registry, block registry
 
+        LanguageRegistry.instance().getStringLocalization("itemGroup.fantasykingdoms", "en_US");
+
+        ItemRegistry.registerItems();
+        BlockRegistry.registerBlocks();
         LogHelper.info("Pre-Initilisation successfully completed");
     }
 

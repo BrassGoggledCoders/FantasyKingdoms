@@ -37,6 +37,7 @@ public class BlockFluidBeer extends BlockFluidClassic
 	{
 		super(fluid, material);
 		// this.setCreativeTab(Steamcraft.tabSC2);
+        this.setBlockName("beerFluidBlock");
 	}
 
 	@Override

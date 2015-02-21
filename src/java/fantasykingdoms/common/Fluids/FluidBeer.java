@@ -10,10 +10,9 @@
  * (http://www.minecraftforum.net/topic/251532-181-steamcraft-source-code-releasedmlv054wip/)
  *
  */
-package fantasykingdoms.common.blocks;
+package fantasykingdoms.common.Fluids;
 
 import net.minecraftforge.fluids.Fluid;
-
 /**
  * @author warlordjones
  * 
