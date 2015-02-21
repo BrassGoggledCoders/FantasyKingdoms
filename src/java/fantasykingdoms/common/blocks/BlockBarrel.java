@@ -18,10 +18,10 @@ public class BlockBarrel extends BaseContainerBlock
 	@SideOnly(Side.CLIENT)
 	private IIcon iconTop, iconBottom;
 
-	public BlockBarrel(Material material)
+	public BlockBarrel()
 	{
 		super(Material.wood);
-        this.setBlockName("blockBarrel");
+		this.setBlockName("blockBarrel");
 
 	}
 

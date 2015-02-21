@@ -1,49 +1,49 @@
 package fantasykingdoms.common.init;
 
-import net.minecraft.block.material.Material;
+import net.minecraft.block.Block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import fantasykingdoms.common.blocks.BaseBlock;
-import fantasykingdoms.common.blocks.BaseContainerBlock;
 import fantasykingdoms.common.blocks.BlockBarrel;
 import fantasykingdoms.common.blocks.BlockExplosiveBarrel;
 import fantasykingdoms.common.blocks.BlockGemstoneOre;
-import fantasykingdoms.common.blocks.BlockOreFK;
-import fantasykingdoms.common.blocks.blockAmethystOre;
-import fantasykingdoms.common.blocks.blockCopperOre;
-import fantasykingdoms.common.blocks.blockRubyOre;
-import fantasykingdoms.common.blocks.blockSapphireOre;
-import fantasykingdoms.common.blocks.blockSilverOre;
-import fantasykingdoms.common.blocks.blockTinOre;
+import fantasykingdoms.common.blocks.BlockOre;
 
 import net.minecraftforge.fluids.Fluid;
 
 public class InitBlocks
 {
-
 	public static Fluid beerFluid;
 
-	public static final BlockGemstoneOre RubyOre = new blockRubyOre();
-	public static final BlockGemstoneOre SapphireOre = new blockSapphireOre();
-	public static final BlockGemstoneOre AmethystOre = new blockAmethystOre();
+	public static Block blockRubyOre;
+	public static Block blockSapphireOre;
+	public static Block blockAmethystOre;
 
-	public static final BlockOreFK CopperOre = new blockCopperOre();
-	public static final BlockOreFK TinOre = new blockTinOre();
-	public static final BlockOreFK SilverOre = new blockSilverOre();
+	public static Block blockCopperOre;
+	public static Block blockTinOre;
+	public static Block blockSilverOre;
 
-	public static final BaseContainerBlock blockBarrel = new BlockBarrel(Material.wood);
-	public static final BaseBlock blockExplosiveBarrel = new BlockExplosiveBarrel(Material.wood);
+	public static Block blockBarrel;
+	public static Block blockExplosiveBarrel;
 
 	public static void registerBlocks()
 	{
-		GameRegistry.registerBlock(RubyOre, "BlockRubyOre");
-		GameRegistry.registerBlock(SapphireOre, "BlockSapphireOre");
-		GameRegistry.registerBlock(AmethystOre, "BlockAmethystOre");
-		GameRegistry.registerBlock(CopperOre, "BlockCopperOre");
-		GameRegistry.registerBlock(TinOre, "BlockTinOre");
-		GameRegistry.registerBlock(SilverOre, "BlockSilverOre");
+		blockRubyOre = new BlockGemstoneOre(InitItems.itemRuby).setBlockName("blockRubyOre");
+		GameRegistry.registerBlock(blockRubyOre, "BlockRubyOre");
+		blockSapphireOre = new BlockGemstoneOre(InitItems.itemSapphire).setBlockName("blockSapphireOre");
+		GameRegistry.registerBlock(blockSapphireOre, "BlockSapphireOre");
+		blockAmethystOre = new BlockGemstoneOre(InitItems.itemAmethyst).setBlockName("blockAmethystOre");
+		GameRegistry.registerBlock(blockAmethystOre, "BlockAmethystOre");
+		blockCopperOre = new BlockOre().setBlockName("blockCopperOre");
+		GameRegistry.registerBlock(blockCopperOre, "BlockCopperOre");
+		blockTinOre = new BlockOre().setBlockName("blockTinOre");
+		GameRegistry.registerBlock(blockTinOre, "BlockTinOre");
+		blockSilverOre = new BlockOre().setBlockName("blockSilverOre");
+		GameRegistry.registerBlock(blockSilverOre, "BlockSilverOre");
+
+		blockBarrel = new BlockBarrel().setBlockName("blockBarrel");
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");
+		blockExplosiveBarrel = new BlockExplosiveBarrel().setBlockName("blockExplosiveBarrel");
 		GameRegistry.registerBlock(blockExplosiveBarrel, "BlockExplosiveBarrel");
 	}
 }

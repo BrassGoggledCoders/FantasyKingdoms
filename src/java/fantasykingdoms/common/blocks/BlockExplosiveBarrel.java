@@ -16,10 +16,10 @@ import net.minecraft.world.World;
 public class BlockExplosiveBarrel extends BaseBlock
 {
 
-	public BlockExplosiveBarrel(Material material)
+	public BlockExplosiveBarrel()
 	{
 		super(Material.wood);
-        this.setBlockName("blockExplosiveBarrel");
+		this.setBlockName("blockExplosiveBarrel");
 
 	}
 
