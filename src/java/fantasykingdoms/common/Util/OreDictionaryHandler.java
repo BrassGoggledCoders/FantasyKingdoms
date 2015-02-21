@@ -7,7 +7,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class OreDictionaryHandler
 {
-	public static void registerOre()
+	public static void registerOres()
 	{
 		OreDictionary.registerOre("oreRuby", InitBlocks.blockRubyOre);
 		OreDictionary.registerOre("oreSapphire", InitBlocks.blockSapphireOre);
