@@ -10,32 +10,31 @@
  * (http://www.minecraftforum.net/topic/251532-181-steamcraft-source-code-releasedmlv054wip/)
  *
  */
-package fantasykingdoms.common.items;
+package fantasykingdoms.common.lib;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import fantasykingdoms.common.FantasyKingdoms;
-import boilerplate.common.baseclasses.RootItem;
+import fantasykingdoms.common.init.InitItems;
+import boilerplate.common.baseclasses.CreativeTabBase;
 
 /**
  * @author warlordjones
  * 
  */
-public class BaseItem extends RootItem
+public class CreativeTabFantasyKingdoms extends CreativeTabBase
 {
-	public BaseItem()
+	public CreativeTabFantasyKingdoms(int id, String name)
 	{
-		super();
-		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		super(id, name);
 	}
 
-	@SideOnly(Side.CLIENT)
 	@Override
-	public void registerIcons(IIconRegister par1IconRegister)
+	@SideOnly(Side.CLIENT)
+	public Item getTabIconItem()
 	{
-		this.itemIcon = par1IconRegister.registerIcon("fantasykingdoms:" + this.getUnlocalizedName().substring(5));
+		return InitItems.itemFullTankard;
 	}
 }

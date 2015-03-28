@@ -2,6 +2,7 @@ package fantasykingdoms.common.util;
 
 import cpw.mods.fml.common.FMLLog;
 
+import fantasykingdoms.common.lib.Reference;
 import org.apache.logging.log4j.Level;
 
 public class LogHelper
