@@ -8,11 +8,13 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 import fantasykingdoms.common.init.InitBlocks;
 import fantasykingdoms.common.init.InitItems;
+import fantasykingdoms.common.init.InitRecipes;
 import fantasykingdoms.common.util.LogHelper;
+import fantasykingdoms.common.util.MaterialHelper;
 import fantasykingdoms.common.util.OreDictionaryHandler;
 import fantasykingdoms.common.util.Reference;
 
-@Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version, dependencies = "required-after:boilerplate")
+@Mod(modid = Reference.MODID, name = Reference.Name, version = Reference.Version, dependencies = "required-after:boilerplate; required-after:Baubles")
 public class FantasyKingdoms
 {
 
@@ -22,6 +24,7 @@ public class FantasyKingdoms
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		MaterialHelper.initializeMaterials();
 		InitItems.registerItems();
 		InitBlocks.registerBlocks();
 
@@ -32,6 +35,7 @@ public class FantasyKingdoms
 	public void init(FMLInitializationEvent event)
 	{
 		OreDictionaryHandler.registerOres();
+		InitRecipes.init();
 
 		LogHelper.info("Initilisation successfully completed");
 	}

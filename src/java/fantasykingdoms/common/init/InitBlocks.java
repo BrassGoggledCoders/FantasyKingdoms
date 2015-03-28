@@ -1,9 +1,11 @@
 package fantasykingdoms.common.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
+import fantasykingdoms.common.blocks.BaseBlock;
 import fantasykingdoms.common.blocks.BlockBarrel;
 import fantasykingdoms.common.blocks.BlockExplosiveBarrel;
 import fantasykingdoms.common.blocks.BlockGemstoneOre;
@@ -22,9 +24,14 @@ public class InitBlocks
 	public static Block blockCopperOre;
 	public static Block blockTinOre;
 	public static Block blockSilverOre;
+	public static Block blockMithrilOre;
 
 	public static Block blockBarrel;
 	public static Block blockExplosiveBarrel;
+
+	public static Block blockStygiumBlock;
+
+	public static Block blockAltar;
 
 	public static void registerBlocks()
 	{
@@ -40,10 +47,19 @@ public class InitBlocks
 		GameRegistry.registerBlock(blockTinOre, "BlockTinOre");
 		blockSilverOre = new BlockOre().setBlockName("blockSilverOre");
 		GameRegistry.registerBlock(blockSilverOre, "BlockSilverOre");
+		blockMithrilOre = new BlockOre().setBlockName("blockMithrilOre");
+		GameRegistry.registerBlock(blockMithrilOre, "BlockMithrilOre");
 
 		blockBarrel = new BlockBarrel().setBlockName("blockBarrel");
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");
 		blockExplosiveBarrel = new BlockExplosiveBarrel().setBlockName("blockExplosiveBarrel");
 		GameRegistry.registerBlock(blockExplosiveBarrel, "BlockExplosiveBarrel");
+
+		blockStygiumBlock = new BaseBlock(Material.anvil).setBlockName("blockStygiumBlock");
+		GameRegistry.registerBlock(blockStygiumBlock, "BlockStygiumBlock");
+
+		blockAltar = new BaseBlock(Material.anvil).setBlockName("blockAltar");
+		GameRegistry.registerBlock(blockAltar, "BlockAltar");
+
 	}
 }
