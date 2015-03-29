@@ -10,7 +10,7 @@ tile.blockCopperOre.name=Copper Ore
 tile.blockTinOre.name=Tin Ore
 tile.blockSilverOre.name=Silver Ore
 tile.blockAltar.name=Altar
-tile.blockStygiumBlock=Stygium Block
+tile.blockStygiumBlock.name=Stygium Block
 #Items
 item.itemRuby.name=Ruby
 item.itemAmethyst.name=Amethyst
@@ -20,6 +20,7 @@ item.itemFullTankard.name=Tankard of Beer
 item.itemCopperIngot.name=Copper Ingot
 item.itemTinIngot.name=Tin Ingot
 item.itemSilverIngot.name=Silver Ingot
+item.itemMithrilIngot.name=Mithril Ingot
 item.itemStygiumIngot.name=Stygium Ingot
 item.itemStygiumNugget.name=Stygium Nugget
 item.itemStygiumRing.name=Stygium Ring

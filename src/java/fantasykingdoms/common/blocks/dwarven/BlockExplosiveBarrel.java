@@ -4,19 +4,26 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 import fantasykingdoms.common.blocks.BaseBlock;
 
 public class BlockExplosiveBarrel extends BaseBlock
 {
+	@SideOnly(Side.CLIENT)
+	private IIcon iconTop;
 
 	public BlockExplosiveBarrel()
 	{
@@ -151,6 +158,31 @@ public class BlockExplosiveBarrel extends BaseBlock
 	public boolean canDropFromExplosion(Explosion p_149659_1_)
 	{
 		return false;
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public IIcon getIcon(int side, int meta)
+	{
+		switch (side)
+		{
+		case 0:
+			return this.iconTop; // bottom
+
+		case 1:
+			return this.iconTop; // top
+
+		default:
+			return this.blockIcon; // sides
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void registerBlockIcons(IIconRegister icon)
+	{
+		this.blockIcon = icon.registerIcon("fantasykingdoms:blockBarrelSideExplosive");
+		this.iconTop = icon.registerIcon("fantasykingdoms:blockBarrelEndClosed");
 	}
 
 }
