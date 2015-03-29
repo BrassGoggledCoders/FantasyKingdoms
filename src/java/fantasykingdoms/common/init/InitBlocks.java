@@ -15,7 +15,7 @@ import net.minecraftforge.fluids.Fluid;
 
 public class InitBlocks
 {
-	public static Fluid beerFluid;
+	public static Fluid beerFluid, treasureFluid;
 
 	public static Block blockRubyOre;
 	public static Block blockSapphireOre;

@@ -3,7 +3,6 @@ package fantasykingdoms.common.blocks.dwarven;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -64,13 +63,12 @@ public class BlockBarrel extends BaseContainerBlock
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float px, float py, float pz)
 	{
-		TileBarrel tile = (TileBarrel) world.getTileEntity(x, y, z);
-		if (player.inventory.consumeInventoryItem(Items.wheat) && tile.getBeerType() == "empty")
-		{
-			tile.setBeerType("normal");
-			tile.setFermentationTime(100);
-			return true;
-		}
+		/*
+		 * TileBarrel tile = (TileBarrel) world.getTileEntity(x, y, z); if
+		 * (player.inventory.consumeInventoryItem(Items.wheat) &&
+		 * tile.getBeerType() == "empty") { tile.setBeerType("normal");
+		 * tile.setFermentationTime(100); return true; }
+		 */
 		return false;
 	}
 

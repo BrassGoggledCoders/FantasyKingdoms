@@ -31,9 +31,11 @@ public class InitItems
 
 	public static Item itemJewelledSword, itemJewelledPickaxe, itemJewelledAxe, itemJewelledShovel, itemJewelledHoe;
 
-	public static Item itemElvenLongbow, itemElvenShortbow;
+	public static Item itemSilverSword, itemSilverPickaxe, itemSilverAxe, itemSilverShovel, itemSilverHoe;
 
-	public static Item itemDwarvenCrossbow;
+	public static Item itemElvenLongbow, itemElvenShortbow, itemDwarvenCrossbow, itemBolt;
+
+	public static Item itemStoneHammer, itemIronHammer, itemGoldHammer, itemDiamondHammer, itemJewelledHammer, itemSilverHammer, itemMithrilHammer;
 
 	public static void registerItems()
 	{
@@ -74,6 +76,16 @@ public class InitItems
 		itemJewelledHoe = new ItemModHoe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemHoeJewelled");
 
 		RegistryHelper.registerToolSet(itemJewelledSword, itemJewelledShovel, itemJewelledPickaxe, itemJewelledAxe, itemJewelledHoe, "Jewelled",
+				"fantasykingdoms");
+
+		// Silver
+		itemSilverPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemPickaxeSilver");
+		itemSilverSword = new ItemModSword(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemSwordSilver");
+		itemSilverShovel = new ItemModShovel(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemShovelSilver");
+		itemSilverAxe = new ItemModAxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemAxeSilver");
+		itemSilverHoe = new ItemModHoe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemHoeSilver");
+
+		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver",
 				"fantasykingdoms");
 	}
 }

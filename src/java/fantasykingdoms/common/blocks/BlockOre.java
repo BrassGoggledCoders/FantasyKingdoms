@@ -8,14 +8,9 @@ import net.minecraft.creativetab.CreativeTabs;
  */
 public class BlockOre extends BaseBlock
 {
-	public BlockOre(Material material)
-	{
-		super(material);
-	}
-
 	public BlockOre()
 	{
-		this(Material.rock);
+		super(Material.rock);
 		this.setStepSound(soundTypeStone);
 		this.setHardness(2.0F);
 		this.setCreativeTab(CreativeTabs.tabBlock);
