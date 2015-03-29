@@ -55,7 +55,7 @@ public class InitItems
 
 		itemStygiumIngot = new BaseItem().setUnlocalizedName("itemStygiumIngot");
 		GameRegistry.registerItem(itemStygiumIngot, "ItemStygiumIngot");
-		itemStygiumNugget = new BaseItem().setUnlocalizedName("itemStgyiumNugget");
+		itemStygiumNugget = new BaseItem().setUnlocalizedName("itemStygiumNugget");
 		GameRegistry.registerItem(itemStygiumNugget, "ItemStygiumNugget");
 
 		itemStygiumRing = new ItemStygiumRing().setUnlocalizedName("itemStygiumRing");
