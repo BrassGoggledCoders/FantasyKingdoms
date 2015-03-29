@@ -5,14 +5,14 @@ import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 import fantasykingdoms.common.items.BaseItem;
-import fantasykingdoms.common.items.ItemEmptyTankard;
 import fantasykingdoms.common.items.ItemModAxe;
 import fantasykingdoms.common.items.ItemModHoe;
 import fantasykingdoms.common.items.ItemModPickaxe;
 import fantasykingdoms.common.items.ItemModShovel;
 import fantasykingdoms.common.items.ItemModSword;
 import fantasykingdoms.common.items.ItemStygiumRing;
-import fantasykingdoms.common.items.ItemTankard;
+import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
+import fantasykingdoms.common.items.dwarven.ItemTankard;
 import fantasykingdoms.common.util.MaterialHelper;
 import boilerplate.common.utils.helpers.RegistryHelper;
 

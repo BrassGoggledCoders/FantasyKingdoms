@@ -6,10 +6,10 @@ import net.minecraft.block.material.Material;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 import fantasykingdoms.common.blocks.BaseBlock;
-import fantasykingdoms.common.blocks.BlockBarrel;
-import fantasykingdoms.common.blocks.BlockExplosiveBarrel;
 import fantasykingdoms.common.blocks.BlockGemstoneOre;
 import fantasykingdoms.common.blocks.BlockOre;
+import fantasykingdoms.common.blocks.dwarven.BlockBarrel;
+import fantasykingdoms.common.blocks.dwarven.BlockExplosiveBarrel;
 
 import net.minecraftforge.fluids.Fluid;
 

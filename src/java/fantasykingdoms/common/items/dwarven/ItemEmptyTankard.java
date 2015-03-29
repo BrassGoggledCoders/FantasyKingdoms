@@ -1,4 +1,4 @@
-package fantasykingdoms.common.items;
+package fantasykingdoms.common.items.dwarven;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -6,6 +6,7 @@ import net.minecraft.world.World;
 
 import fantasykingdoms.common.init.InitBlocks;
 import fantasykingdoms.common.init.InitItems;
+import fantasykingdoms.common.items.BaseItem;
 import fantasykingdoms.common.tiles.TileBarrel;
 
 public class ItemEmptyTankard extends BaseItem

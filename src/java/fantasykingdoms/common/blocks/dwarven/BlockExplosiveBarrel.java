@@ -1,4 +1,4 @@
-package fantasykingdoms.common.blocks;
+package fantasykingdoms.common.blocks.dwarven;
 
 import java.util.Random;
 
@@ -12,6 +12,8 @@ import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import fantasykingdoms.common.blocks.BaseBlock;
 
 public class BlockExplosiveBarrel extends BaseBlock
 {
