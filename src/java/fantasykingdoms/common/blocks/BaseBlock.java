@@ -21,6 +21,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import fantasykingdoms.common.FantasyKingdoms;
+import fantasykingdoms.common.lib.Reference;
 
 /**
  * @author Surseance
@@ -39,7 +40,7 @@ public class BaseBlock extends Block
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister ir)
 	{
-		this.blockIcon = ir.registerIcon("fantasykingdoms:" + this.getUnlocalizedName().substring(5));
+		this.blockIcon = ir.registerIcon(Reference.PREFIX + this.getUnlocalizedName().substring(5));
 	}
 
 	/**

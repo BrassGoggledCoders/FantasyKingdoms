@@ -20,17 +20,16 @@ import boilerplate.common.baseclasses.BaseMetadataBlock;
 /**
  * Created by Toby on 15/02/2015.
  */
-public class BlockOre extends BaseMetadataBlock
+public class BlockMetal extends BaseMetadataBlock
 {
-	public IIcon[] icon = new IIcon[4];
+	public IIcon[] icon = new IIcon[5];
 
-	public BlockOre()
+	public BlockMetal()
 	{
-		super(Material.rock);
-		this.setStepSound(soundTypeStone);
+		super(Material.iron);
+		this.setStepSound(soundTypeAnvil);
 		this.setHardness(2.0F);
 		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
-		this.setHarvestLevel("pickaxe", 2);
 	}
 
 	@Override
@@ -44,10 +43,11 @@ public class BlockOre extends BaseMetadataBlock
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockCopperOre");
-		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockTinOre");
-		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockSilverOre");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockMithrilOre");
+		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockCopper");
+		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockTin");
+		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockSilver");
+		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockMithril");
+		this.icon[4] = ir.registerIcon(Reference.PREFIX + "blockStygium");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -56,6 +56,6 @@ public class BlockOre extends BaseMetadataBlock
 	public void getSubBlocks(final Item item, final CreativeTabs tab, final List l)
 	{
 		for (int var4 = 0; var4 < this.icon.length; ++var4)
-			l.add(new ItemStack(InitBlocks.blockMetalOre, 1, var4));
+			l.add(new ItemStack(InitBlocks.blockMetal, 1, var4));
 	}
 }

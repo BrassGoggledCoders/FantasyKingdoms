@@ -18,6 +18,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import fantasykingdoms.common.FantasyKingdoms;
+import fantasykingdoms.common.lib.Reference;
 import boilerplate.common.baseclasses.RootItem;
 
 /**
@@ -36,6 +37,6 @@ public class BaseItem extends RootItem
 	@Override
 	public void registerIcons(IIconRegister par1IconRegister)
 	{
-		this.itemIcon = par1IconRegister.registerIcon("fantasykingdoms:" + this.getUnlocalizedName().substring(5));
+		this.itemIcon = par1IconRegister.registerIcon(Reference.PREFIX + this.getUnlocalizedName().substring(5));
 	}
 }

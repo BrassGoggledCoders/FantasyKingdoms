@@ -31,11 +31,11 @@ import fantasykingdoms.common.lib.Reference;
  * @author warlordjones
  * 
  */
-public class ItemGem extends BaseItemWithMetadata
+public class ItemNugget extends BaseItemWithMetadata
 {
-	IIcon[] itemIcon = new IIcon[3];
+	IIcon[] itemIcon = new IIcon[5];
 
-	public ItemGem()
+	public ItemNugget()
 	{
 		super();
 		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
@@ -45,9 +45,10 @@ public class ItemGem extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemRuby");
-		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemSapphire");
-		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemAmethyst");
+		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemCopperNugget");
+		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemTinNugget");
+		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemSilverNugget");
+		this.itemIcon[4] = ir.registerIcon(Reference.PREFIX + "itemStygiumNugget");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -55,8 +56,8 @@ public class ItemGem extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item item, CreativeTabs tab, List l)
 	{
-		for (int var4 = 0; var4 < 3; ++var4)
-			l.add(new ItemStack(InitItems.itemGem, 1, var4));
+		for (int var4 = 0; var4 < 5; ++var4)
+			l.add(new ItemStack(InitItems.itemNugget, 1, var4));
 	}
 
 	@Override

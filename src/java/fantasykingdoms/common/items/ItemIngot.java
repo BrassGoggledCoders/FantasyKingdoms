@@ -23,6 +23,7 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitItems;
 import fantasykingdoms.common.lib.Reference;
 
@@ -34,14 +35,20 @@ public class ItemIngot extends BaseItemWithMetadata
 {
 	IIcon[] itemIcon = new IIcon[5];
 
+	public ItemIngot()
+	{
+		super();
+		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
+	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon[0] = ir.registerIcon(Reference.MODID + "itemCopperIngot");
-		this.itemIcon[1] = ir.registerIcon(Reference.MODID + "itemTinIngot");
-		this.itemIcon[2] = ir.registerIcon(Reference.MODID + "itemSilverIngot");
-		this.itemIcon[4] = ir.registerIcon(Reference.MODID + "itemStygiumIngot");
+		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemCopperIngot");
+		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemTinIngot");
+		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemSilverIngot");
+		this.itemIcon[4] = ir.registerIcon(Reference.PREFIX + "itemStygiumIngot");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

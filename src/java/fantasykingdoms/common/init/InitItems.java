@@ -4,7 +4,6 @@ import net.minecraft.item.Item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import fantasykingdoms.common.items.BaseItem;
 import fantasykingdoms.common.items.ItemGem;
 import fantasykingdoms.common.items.ItemIngot;
 import fantasykingdoms.common.items.ItemModAxe;
@@ -12,9 +11,11 @@ import fantasykingdoms.common.items.ItemModHoe;
 import fantasykingdoms.common.items.ItemModPickaxe;
 import fantasykingdoms.common.items.ItemModShovel;
 import fantasykingdoms.common.items.ItemModSword;
+import fantasykingdoms.common.items.ItemNugget;
 import fantasykingdoms.common.items.ItemStygiumRing;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
+import fantasykingdoms.common.lib.Reference;
 import fantasykingdoms.common.util.MaterialHelper;
 import boilerplate.common.utils.helpers.RegistryHelper;
 
@@ -25,11 +26,12 @@ public class InitItems
 {
 	public static Item itemGem;
 	public static Item itemIngot;
+	public static Item itemNugget;
 
 	public static Item itemEmptyTankard;
 	public static Item itemFullTankard;
 
-	public static Item itemStygiumNugget, itemStygiumRing;
+	public static Item itemStygiumRing;
 
 	public static Item itemJewelledSword, itemJewelledPickaxe, itemJewelledAxe, itemJewelledShovel, itemJewelledHoe;
 
@@ -45,9 +47,8 @@ public class InitItems
 		GameRegistry.registerItem(itemGem, "ItemGem");
 		itemIngot = new ItemIngot().setUnlocalizedName("itemIngot");
 		GameRegistry.registerItem(itemIngot, "ItemIngot");
-
-		itemStygiumNugget = new BaseItem().setUnlocalizedName("itemStygiumNugget");
-		GameRegistry.registerItem(itemStygiumNugget, "ItemStygiumNugget");
+		itemNugget = new ItemNugget().setUnlocalizedName("itemNugget");
+		GameRegistry.registerItem(itemNugget, "ItemNugget");
 
 		itemStygiumRing = new ItemStygiumRing().setUnlocalizedName("itemStygiumRing");
 		GameRegistry.registerItem(itemStygiumRing, "ItemStygiumRing");
@@ -65,7 +66,7 @@ public class InitItems
 		itemJewelledHoe = new ItemModHoe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemHoeJewelled");
 
 		RegistryHelper.registerToolSet(itemJewelledSword, itemJewelledShovel, itemJewelledPickaxe, itemJewelledAxe, itemJewelledHoe, "Jewelled",
-				"fantasykingdoms");
+				Reference.MODID);
 
 		// Silver
 		itemSilverPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemPickaxeSilver");
@@ -74,7 +75,6 @@ public class InitItems
 		itemSilverAxe = new ItemModAxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemAxeSilver");
 		itemSilverHoe = new ItemModHoe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemHoeSilver");
 
-		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver",
-				"fantasykingdoms");
+		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", Reference.MODID);
 	}
 }
