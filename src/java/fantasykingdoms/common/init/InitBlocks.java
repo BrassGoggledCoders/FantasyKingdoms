@@ -13,18 +13,14 @@ import fantasykingdoms.common.blocks.dwarven.BlockExplosiveBarrel;
 
 import net.minecraftforge.fluids.Fluid;
 
+import boilerplate.common.baseclasses.BaseItemBlockWithMetadata;
+
 public class InitBlocks
 {
 	public static Fluid beerFluid, treasureFluid;
 
-	public static Block blockRubyOre;
-	public static Block blockSapphireOre;
-	public static Block blockAmethystOre;
-
-	public static Block blockCopperOre;
-	public static Block blockTinOre;
-	public static Block blockSilverOre;
-	public static Block blockMithrilOre;
+	public static Block blockGemOre;
+	public static Block blockMetalOre;
 
 	public static Block blockBarrel;
 	public static Block blockExplosiveBarrel;
@@ -35,20 +31,10 @@ public class InitBlocks
 
 	public static void registerBlocks()
 	{
-		blockRubyOre = new BlockGemstoneOre(InitItems.itemRuby).setBlockName("blockRubyOre");
-		GameRegistry.registerBlock(blockRubyOre, "BlockRubyOre");
-		blockSapphireOre = new BlockGemstoneOre(InitItems.itemSapphire).setBlockName("blockSapphireOre");
-		GameRegistry.registerBlock(blockSapphireOre, "BlockSapphireOre");
-		blockAmethystOre = new BlockGemstoneOre(InitItems.itemAmethyst).setBlockName("blockAmethystOre");
-		GameRegistry.registerBlock(blockAmethystOre, "BlockAmethystOre");
-		blockCopperOre = new BlockOre().setBlockName("blockCopperOre");
-		GameRegistry.registerBlock(blockCopperOre, "BlockCopperOre");
-		blockTinOre = new BlockOre().setBlockName("blockTinOre");
-		GameRegistry.registerBlock(blockTinOre, "BlockTinOre");
-		blockSilverOre = new BlockOre().setBlockName("blockSilverOre");
-		GameRegistry.registerBlock(blockSilverOre, "BlockSilverOre");
-		blockMithrilOre = new BlockOre().setBlockName("blockMithrilOre");
-		GameRegistry.registerBlock(blockMithrilOre, "BlockMithrilOre");
+		blockGemOre = new BlockGemstoneOre().setBlockName("blockGemOre");
+		GameRegistry.registerBlock(blockGemOre, BaseItemBlockWithMetadata.class, "BlockGemOre");
+		blockMetalOre = new BlockOre().setBlockName("blockMetalOre");
+		GameRegistry.registerBlock(blockMetalOre, BaseItemBlockWithMetadata.class, "BlockMetalOre");
 
 		blockBarrel = new BlockBarrel().setBlockName("blockBarrel");
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");

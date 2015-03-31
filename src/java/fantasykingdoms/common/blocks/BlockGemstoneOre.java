@@ -1,18 +1,18 @@
 package fantasykingdoms.common.blocks;
 
-import java.util.Random;
+import java.util.ArrayList;
 
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+
+import fantasykingdoms.common.init.InitItems;
 
 public class BlockGemstoneOre extends BlockOre
 {
-	private Item item;
 
-	public BlockGemstoneOre(Item gemItem)
+	public BlockGemstoneOre()
 	{
 		super();
-		this.item = gemItem;
-		this.setStepSound(soundTypeStone);
 		this.setHardness(2.0F);
 	}
 
@@ -23,8 +23,12 @@ public class BlockGemstoneOre extends BlockOre
 	}
 
 	@Override
-	public Item getItemDropped(int i, Random random, int j)
+	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune)
 	{
-		return item;
+		ArrayList<ItemStack> drop = new ArrayList<ItemStack>();
+
+		drop.add(new ItemStack(InitItems.itemGem, metadata));
+
+		return drop;
 	}
 }

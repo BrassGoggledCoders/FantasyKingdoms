@@ -5,6 +5,8 @@ import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 import fantasykingdoms.common.items.BaseItem;
+import fantasykingdoms.common.items.ItemGem;
+import fantasykingdoms.common.items.ItemIngot;
 import fantasykingdoms.common.items.ItemModAxe;
 import fantasykingdoms.common.items.ItemModHoe;
 import fantasykingdoms.common.items.ItemModPickaxe;
@@ -21,13 +23,13 @@ import boilerplate.common.utils.helpers.RegistryHelper;
  */
 public class InitItems
 {
-	public static Item itemRuby, itemSapphire, itemAmethyst;
-	public static Item itemCopperIngot, itemTinIngot, itemSilverIngot, itemMithrilIngot;
+	public static Item itemGem;
+	public static Item itemIngot;
 
 	public static Item itemEmptyTankard;
 	public static Item itemFullTankard;
 
-	public static Item itemStygiumIngot, itemStygiumNugget, itemStygiumRing;
+	public static Item itemStygiumNugget, itemStygiumRing;
 
 	public static Item itemJewelledSword, itemJewelledPickaxe, itemJewelledAxe, itemJewelledShovel, itemJewelledHoe;
 
@@ -39,24 +41,11 @@ public class InitItems
 
 	public static void registerItems()
 	{
-		itemRuby = new BaseItem().setUnlocalizedName("itemRuby");
-		GameRegistry.registerItem(itemRuby, "ItemRuby");
-		itemSapphire = new BaseItem().setUnlocalizedName("itemSapphire");
-		GameRegistry.registerItem(itemSapphire, "ItemSapphire");
-		itemAmethyst = new BaseItem().setUnlocalizedName("itemAmethyst");
-		GameRegistry.registerItem(itemAmethyst, "ItemAmethyst");
+		itemGem = new ItemGem().setUnlocalizedName("itemGem");
+		GameRegistry.registerItem(itemGem, "ItemGem");
+		itemIngot = new ItemIngot().setUnlocalizedName("itemIngot");
+		GameRegistry.registerItem(itemIngot, "ItemIngot");
 
-		itemCopperIngot = new BaseItem().setUnlocalizedName("itemCopperIngot");
-		GameRegistry.registerItem(itemCopperIngot, "itemCopperIngot");
-		itemTinIngot = new BaseItem().setUnlocalizedName("itemTinIngot");
-		GameRegistry.registerItem(itemTinIngot, "ItemTinIngot");
-		itemSilverIngot = new BaseItem().setUnlocalizedName("itemSilverIngot");
-		GameRegistry.registerItem(itemSilverIngot, "ItemSilverIngot");
-		itemMithrilIngot = new BaseItem().setUnlocalizedName("itemMithrilIngot");
-		GameRegistry.registerItem(itemMithrilIngot, "ItemMithrilIngot");
-
-		itemStygiumIngot = new BaseItem().setUnlocalizedName("itemStygiumIngot");
-		GameRegistry.registerItem(itemStygiumIngot, "ItemStygiumIngot");
 		itemStygiumNugget = new BaseItem().setUnlocalizedName("itemStygiumNugget");
 		GameRegistry.registerItem(itemStygiumNugget, "ItemStygiumNugget");
 
