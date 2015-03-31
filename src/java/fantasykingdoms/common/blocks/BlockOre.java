@@ -47,7 +47,8 @@ public class BlockOre extends BaseMetadataBlock
 		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockCopperOre");
 		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockTinOre");
 		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockSilverOre");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockMithrilOre");
+		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockLeadOre");
+		this.icon[4] = ir.registerIcon(Reference.PREFIX + "blockMithrilOre");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

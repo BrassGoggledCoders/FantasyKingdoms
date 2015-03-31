@@ -46,8 +46,9 @@ public class BlockMetal extends BaseMetadataBlock
 		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockCopper");
 		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockTin");
 		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockSilver");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockMithril");
-		this.icon[4] = ir.registerIcon(Reference.PREFIX + "blockStygium");
+		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockLead");
+		this.icon[4] = ir.registerIcon(Reference.PREFIX + "blockMithril");
+		this.icon[5] = ir.registerIcon(Reference.PREFIX + "blockStygium");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

@@ -33,7 +33,7 @@ import fantasykingdoms.common.lib.Reference;
  */
 public class ItemIngot extends BaseItemWithMetadata
 {
-	IIcon[] itemIcon = new IIcon[5];
+	IIcon[] itemIcon = new IIcon[6];
 
 	public ItemIngot()
 	{
@@ -48,7 +48,9 @@ public class ItemIngot extends BaseItemWithMetadata
 		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemCopperIngot");
 		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemTinIngot");
 		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemSilverIngot");
-		this.itemIcon[4] = ir.registerIcon(Reference.PREFIX + "itemStygiumIngot");
+		this.itemIcon[3] = ir.registerIcon(Reference.PREFIX + "itemLeadIngot");
+		this.itemIcon[4] = ir.registerIcon(Reference.PREFIX + "itemMithrilIngot");
+		this.itemIcon[5] = ir.registerIcon(Reference.PREFIX + "itemStygiumIngot");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
