@@ -6,9 +6,11 @@ import net.minecraft.block.material.Material;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 import fantasykingdoms.common.blocks.BaseBlock;
+import fantasykingdoms.common.blocks.BlockFog;
 import fantasykingdoms.common.blocks.BlockGemstoneOre;
 import fantasykingdoms.common.blocks.BlockMetal;
 import fantasykingdoms.common.blocks.BlockOre;
+import fantasykingdoms.common.blocks.BlockSolidFog;
 import fantasykingdoms.common.blocks.dwarven.BlockBarrel;
 import fantasykingdoms.common.blocks.dwarven.BlockExplosiveBarrel;
 
@@ -29,6 +31,8 @@ public class InitBlocks
 
 	public static Block blockAltar;
 
+	public static Block blockFog, blockSolidFog;
+
 	public static void registerBlocks()
 	{
 		blockGemOre = new BlockGemstoneOre().setBlockName("blockGemOre");
@@ -45,6 +49,12 @@ public class InitBlocks
 
 		blockAltar = new BaseBlock(Material.anvil).setBlockName("blockAltar");
 		// GameRegistry.registerBlock(blockAltar, "BlockAltar");
+
+		blockFog = new BlockFog().setBlockName("blockFog");
+		GameRegistry.registerBlock(blockFog, "BlockFog");
+
+		blockSolidFog = new BlockSolidFog().setBlockName("blockSolidFog");
+		GameRegistry.registerBlock(blockSolidFog, "BlockSolidFog");
 
 	}
 }
