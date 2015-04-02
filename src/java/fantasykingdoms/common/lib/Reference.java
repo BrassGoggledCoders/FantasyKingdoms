@@ -9,7 +9,11 @@ public class Reference
 
 	public static final String PREFIX = MODID + ":";
 
-	public static final String Name = "Fantasy Kingdoms";
+	public static final String NAME = "Fantasy Kingdoms";
 
 	public static final String Version = "0.0.1";
+
+	public static final String CLIENT_PROXY = "fantasykingdoms.client.ClientProxy";
+
+	public static final String COMMON_PROXY = "fantasykingdoms.common.CommonProxy";
 }

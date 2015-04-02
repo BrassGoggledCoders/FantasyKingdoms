@@ -13,6 +13,7 @@ import fantasykingdoms.common.items.ItemModShovel;
 import fantasykingdoms.common.items.ItemModSword;
 import fantasykingdoms.common.items.ItemNugget;
 import fantasykingdoms.common.items.ItemStygiumRing;
+import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
 import fantasykingdoms.common.lib.Reference;
@@ -41,6 +42,8 @@ public class InitItems
 
 	public static Item itemStoneHammer, itemIronHammer, itemGoldHammer, itemDiamondHammer, itemJewelledHammer, itemSilverHammer, itemMithrilHammer;
 
+	public static Item itemWizardsKey;
+
 	public static void registerItems()
 	{
 		itemGem = new ItemGem().setUnlocalizedName("itemGem");
@@ -57,6 +60,9 @@ public class InitItems
 		GameRegistry.registerItem(itemEmptyTankard, "ItemEmptyTankard");
 		itemFullTankard = new ItemTankard().setUnlocalizedName("itemFullTankard");
 		GameRegistry.registerItem(itemFullTankard, "ItemTankard");
+
+		itemWizardsKey = new ItemWizardsKey().setUnlocalizedName("itemWizardsKey");
+		GameRegistry.registerItem(itemWizardsKey, "ItemWizardsKey");
 
 		// Jewelled
 		itemJewelledPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemPickaxeJewelled");

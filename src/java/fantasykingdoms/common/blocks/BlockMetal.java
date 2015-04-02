@@ -22,7 +22,7 @@ import boilerplate.common.baseclasses.BaseMetadataBlock;
  */
 public class BlockMetal extends BaseMetadataBlock
 {
-	public IIcon[] icon = new IIcon[5];
+	public IIcon[] icon = new IIcon[6];
 
 	public BlockMetal()
 	{

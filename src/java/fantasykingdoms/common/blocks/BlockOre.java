@@ -22,7 +22,7 @@ import boilerplate.common.baseclasses.BaseMetadataBlock;
  */
 public class BlockOre extends BaseMetadataBlock
 {
-	public IIcon[] icon = new IIcon[4];
+	public IIcon[] icon = new IIcon[5];
 
 	public BlockOre()
 	{

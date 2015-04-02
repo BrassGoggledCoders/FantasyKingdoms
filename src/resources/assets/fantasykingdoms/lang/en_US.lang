@@ -9,9 +9,16 @@ tile.blockGemOre.2.name=Amethyst Ore
 tile.blockMetalOre.0.name=Copper Ore
 tile.blockMetalOre.1.name=Tin Ore
 tile.blockMetalOre.2.name=Silver Ore
-tile.blockMetalOre.3.name=Mithril Ore
+tile.blockMetalOre.3.name=Lead Ore
+tile.blockMetalOre.4.name=Mithril Ore
 tile.blockAltar.name=Altar
-tile.blockStygiumBlock.name=Stygium Block
+tile.blockMetal.0.name=Copper Block
+tile.blockMetal.1.name=Tin Block
+tile.blockMetal.2.name=Silver Block
+tile.blockMetal.3.name=Lead Block
+tile.blockMetal.4.name=Mithril Block
+tile.blockMetal.5.name=Stygium Block
+
 #Items
 item.itemGem.0.name=Ruby
 item.itemGem.1.name=Amethyst
@@ -23,7 +30,11 @@ item.itemIngot.1.name=Tin Ingot
 item.itemIngot.2.name=Silver Ingot
 item.itemIngot.3.name=Mithril Ingot
 item.itemIngot.4.name=Stygium Ingot
-item.itemStygiumNugget.name=Stygium Nugget
+item.itemNugget.0.name=Copper Nugget
+item.itemNugget.1.name=Tin Nugget
+item.itemNugget.2.name=Silver Nugget
+item.itemNugget.3.name=Mithril Nugget
+item.itemNugget.4.name=Stygium Nugget
 item.itemStygiumRing.name=Stygium Ring
 item.itemStygiumRing.desc=The magical properties of wrought stygium cause it to burst into flames when exposed to sunlight. However, legend says rings created of the metal grant the wearer the powers of the night.
 item.itemPickaxeJewelled.name=Jewelled Pickaxe
@@ -31,5 +42,11 @@ item.itemSwordJewelled.name=Jewelled Sword
 item.itemShovelJewelled.name=Jewelled Shovel
 item.itemAxeJewelled.name=Jewelled Axe
 item.itemHoeJewelled.name=Jewelled Hoe
+item.itemPickaxeSilver.name=Silver Pickaxe
+item.itemSwordSilver.name=Silver Sword
+item.itemShovelSilver.name=Silver Shovel
+item.itemAxeSilver.name=Silver Axe
+item.itemHoeSilver.name=Silver Hoe
+
 #Other
 itemGroup.fantasykingdoms=Fantasy Kingdoms

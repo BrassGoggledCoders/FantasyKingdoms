@@ -44,7 +44,7 @@ public class InitBlocks
 		GameRegistry.registerBlock(blockExplosiveBarrel, "BlockExplosiveBarrel");
 
 		blockAltar = new BaseBlock(Material.anvil).setBlockName("blockAltar");
-		GameRegistry.registerBlock(blockAltar, "BlockAltar");
+		// GameRegistry.registerBlock(blockAltar, "BlockAltar");
 
 	}
 }
