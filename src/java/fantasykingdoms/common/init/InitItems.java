@@ -62,7 +62,7 @@ public class InitItems
 		GameRegistry.registerItem(itemFullTankard, "ItemTankard");
 
 		itemWizardsKey = new ItemWizardsKey().setUnlocalizedName("itemWizardsKey");
-		GameRegistry.registerItem(itemWizardsKey, "ItemWizardsKey");
+		// GameRegistry.registerItem(itemWizardsKey, "ItemWizardsKey");
 
 		// Jewelled
 		itemJewelledPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemPickaxeJewelled");
