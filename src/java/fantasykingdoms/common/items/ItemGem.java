@@ -23,7 +23,6 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitItems;
 import fantasykingdoms.common.lib.Reference;
 
@@ -38,7 +37,6 @@ public class ItemGem extends BaseItemWithMetadata
 	public ItemGem()
 	{
 		super();
-		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
 	}
 
 	@Override

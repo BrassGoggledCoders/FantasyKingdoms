@@ -13,8 +13,9 @@
  */
 package fantasykingdoms.common.items;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+
+import fantasykingdoms.common.FantasyKingdoms;
 
 /**
  * @author warlordjones
@@ -26,7 +27,7 @@ public class BaseItemWithMetadata extends BaseItem
 	{
 		super();
 		this.setHasSubtypes(true);
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
 	}
 
 	@Override

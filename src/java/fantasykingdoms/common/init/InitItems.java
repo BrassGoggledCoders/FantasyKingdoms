@@ -15,6 +15,8 @@ import fantasykingdoms.common.items.ItemNugget;
 import fantasykingdoms.common.items.ItemStygiumRing;
 import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
+import fantasykingdoms.common.items.dwarven.ItemRune;
+import fantasykingdoms.common.items.dwarven.ItemSigil;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
 import fantasykingdoms.common.lib.Reference;
 import fantasykingdoms.common.util.MaterialHelper;
@@ -43,6 +45,8 @@ public class InitItems
 	public static Item itemStoneHammer, itemIronHammer, itemGoldHammer, itemDiamondHammer, itemJewelledHammer, itemSilverHammer, itemMithrilHammer;
 
 	public static Item itemWizardsKey;
+
+	public static Item itemRune, itemSigil, itemRunicAmulet, itemRunicRing;
 
 	public static void registerItems()
 	{
@@ -82,5 +86,8 @@ public class InitItems
 		itemSilverHoe = new ItemModHoe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemHoeSilver");
 
 		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", Reference.MODID);
+
+		itemRune = new ItemRune().setUnlocalizedName("itemRune");
+		itemSigil = new ItemSigil().setUnlocalizedName("itemSigil");
 	}
 }
