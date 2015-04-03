@@ -17,7 +17,7 @@ import fantasykingdoms.common.lib.Reference;
 
 public class ItemRune extends BaseItemWithMetadata
 {
-	IIcon[] itemIcon = new IIcon[3];
+	IIcon[] itemIcon = new IIcon[24];
 
 	public ItemRune()
 	{
@@ -28,9 +28,30 @@ public class ItemRune extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemRuneIsaz");
-		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemRune2");
-		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemRune3");
+		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemRuneFehu");
+		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemRuneUruz");
+		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemRuneThurisaz");
+		this.itemIcon[3] = ir.registerIcon(Reference.PREFIX + "itemRuneAnsuz");
+		this.itemIcon[4] = ir.registerIcon(Reference.PREFIX + "itemRuneRaido");
+		this.itemIcon[5] = ir.registerIcon(Reference.PREFIX + "itemRuneKenaz");
+		this.itemIcon[6] = ir.registerIcon(Reference.PREFIX + "itemRuneGifu");
+		this.itemIcon[7] = ir.registerIcon(Reference.PREFIX + "itemRuneWunjo");
+		this.itemIcon[8] = ir.registerIcon(Reference.PREFIX + "itemRuneHagalaz");
+		this.itemIcon[9] = ir.registerIcon(Reference.PREFIX + "itemRuneNauthiz");
+		this.itemIcon[10] = ir.registerIcon(Reference.PREFIX + "itemRuneIsa");
+		this.itemIcon[11] = ir.registerIcon(Reference.PREFIX + "itemRuneJera");
+		this.itemIcon[12] = ir.registerIcon(Reference.PREFIX + "itemRuneEihwaz");
+		this.itemIcon[13] = ir.registerIcon(Reference.PREFIX + "itemRunePertho");
+		this.itemIcon[14] = ir.registerIcon(Reference.PREFIX + "itemRuneAlgiz");
+		this.itemIcon[15] = ir.registerIcon(Reference.PREFIX + "itemRuneSowulo");
+		this.itemIcon[16] = ir.registerIcon(Reference.PREFIX + "itemRuneTeiwaz");
+		this.itemIcon[17] = ir.registerIcon(Reference.PREFIX + "itemRuneBerkana");
+		this.itemIcon[18] = ir.registerIcon(Reference.PREFIX + "itemRuneEhwaz");
+		this.itemIcon[19] = ir.registerIcon(Reference.PREFIX + "itemRuneMannaz");
+		this.itemIcon[20] = ir.registerIcon(Reference.PREFIX + "itemRuneLaguz");
+		this.itemIcon[21] = ir.registerIcon(Reference.PREFIX + "itemRuneInguz");
+		this.itemIcon[22] = ir.registerIcon(Reference.PREFIX + "itemRuneOthila");
+		this.itemIcon[23] = ir.registerIcon(Reference.PREFIX + "itemRuneDagaz");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -38,7 +59,7 @@ public class ItemRune extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item item, CreativeTabs tab, List l)
 	{
-		for (int var4 = 0; var4 < 3; ++var4)
+		for (int var4 = 0; var4 < 24; ++var4)
 			l.add(new ItemStack(InitItems.itemRune, 1, var4));
 	}
 

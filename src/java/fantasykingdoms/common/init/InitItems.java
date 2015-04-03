@@ -88,6 +88,8 @@ public class InitItems
 		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", Reference.MODID);
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
+		GameRegistry.registerItem(itemRune, "ItemRune");
 		itemSigil = new ItemSigil().setUnlocalizedName("itemSigil");
+		GameRegistry.registerItem(itemSigil, "ItemSigil");
 	}
 }

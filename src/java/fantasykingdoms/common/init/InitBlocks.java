@@ -8,6 +8,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import fantasykingdoms.common.blocks.BaseBlock;
 import fantasykingdoms.common.blocks.BlockFog;
 import fantasykingdoms.common.blocks.BlockGemstoneOre;
+import fantasykingdoms.common.blocks.BlockInvisLight;
 import fantasykingdoms.common.blocks.BlockMetal;
 import fantasykingdoms.common.blocks.BlockOre;
 import fantasykingdoms.common.blocks.BlockSolidFog;
@@ -33,6 +34,8 @@ public class InitBlocks
 
 	public static Block blockFog, blockSolidFog;
 
+	public static Block blockInvisLight;
+
 	public static void registerBlocks()
 	{
 		blockGemOre = new BlockGemstoneOre().setBlockName("blockGemOre");
@@ -55,6 +58,9 @@ public class InitBlocks
 
 		blockSolidFog = new BlockSolidFog().setBlockName("blockSolidFog");
 		GameRegistry.registerBlock(blockSolidFog, "BlockSolidFog");
+
+		blockInvisLight = new BlockInvisLight(Material.air).setBlockName("blockInvisLight");
+		GameRegistry.registerBlock(blockInvisLight, "BlockInvisLight");
 
 	}
 }
