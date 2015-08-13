@@ -6,4 +6,9 @@ public class CommonProxy
 	{
 
 	}
+
+	private void registerEntityRenderers()
+	{
+
+	}
 }

@@ -27,6 +27,11 @@ import fantasykingdoms.common.worldgen.WorldGeneratorFantasyKingdoms;
 @Mod(modid = ModInfo.MODID, name = ModInfo.NAME, version = ModInfo.Version, dependencies = "required-after:boilerplate; required-after:Baubles")
 public class FantasyKingdoms
 {
+	/**
+	 * Opposite to shadewood, More stones & woods (elm, ash, yew, ironwood,
+	 * deaththorn) Decorative dwarven blocks (runic patterns, decorative single
+	 * rune blocks, gilded blocks etc)
+	 */
 	@Mod.Instance("FantasyKingdoms")
 	public static FantasyKingdoms modInstance;
 
