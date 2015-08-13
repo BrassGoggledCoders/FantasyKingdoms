@@ -46,10 +46,13 @@ public class InitItems
 
 	public static Item itemElvenLongbow, itemElvenShortbow, itemDwarvenCrossbow, itemBolt;
 
-	public static Item itemStoneHammer, itemIronHammer, itemGoldHammer, itemDiamondHammer, itemJewelledHammer, itemSilverHammer, itemMithrilHammer;
+	public static Item itemStoneWarhammer, itemIronWarhammer, itemGoldWarhammer, itemDiamondWarhammer, itemJewelledWarhammer, itemSilverWarhammer,
+			itemMithrilWarhammer;
 
 	public static Item itemStoneBattleaxe, itemIronBattleaxe, itemGoldBattleaxe, itemDiamondBattleaxe, itemJewelledBattleaxe, itemSilverBattleaxe,
 			itemMithrilBattleaxe;
+
+	public static Item itemStoneMace, itemIronMace, itemGoldMace, itemDiamondMace, itemJewelledMace, itemSilverMace, itemMithrilMace;
 
 	public static Item itemRuneblade;
 
