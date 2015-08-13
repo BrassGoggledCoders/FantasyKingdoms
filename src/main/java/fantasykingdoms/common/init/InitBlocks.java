@@ -12,6 +12,7 @@ import fantasykingdoms.common.blocks.BaseBlock;
 import fantasykingdoms.common.blocks.BlockFog;
 import fantasykingdoms.common.blocks.BlockGemstoneOre;
 import fantasykingdoms.common.blocks.BlockInvisLight;
+import fantasykingdoms.common.blocks.BlockMarble;
 import fantasykingdoms.common.blocks.BlockMetal;
 import fantasykingdoms.common.blocks.BlockOre;
 import fantasykingdoms.common.blocks.BlockSolidFog;
@@ -25,6 +26,7 @@ public class InitBlocks
 	public static Block blockGemOre;
 	public static Block blockMetalOre;
 	public static Block blockMetal;
+	public static Block blockMarble;
 
 	public static Block blockBarrel;
 	public static Block blockExplosiveBarrel;
@@ -43,6 +45,8 @@ public class InitBlocks
 		GameRegistry.registerBlock(blockMetalOre, BaseItemBlockWithMetadata.class, "BlockMetalOre");
 		blockMetal = new BlockMetal().setBlockName("blockMetal");
 		GameRegistry.registerBlock(blockMetal, BaseItemBlockWithMetadata.class, "BlockMetal");
+		blockMarble = new BlockMarble().setBlockName("blockMarble");
+		GameRegistry.registerBlock(blockMarble, BaseItemBlockWithMetadata.class, "BlockMarble");
 
 		blockBarrel = new BlockBarrel().setBlockName("blockBarrel");
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");
