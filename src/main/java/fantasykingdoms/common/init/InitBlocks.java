@@ -16,6 +16,7 @@ import fantasykingdoms.common.blocks.BlockInvisLight;
 import fantasykingdoms.common.blocks.BlockMarble;
 import fantasykingdoms.common.blocks.BlockMetal;
 import fantasykingdoms.common.blocks.BlockOre;
+import fantasykingdoms.common.blocks.BlockShadowstone;
 import fantasykingdoms.common.blocks.BlockSolidFog;
 import fantasykingdoms.common.blocks.dwarven.BlockBarrel;
 import fantasykingdoms.common.blocks.dwarven.BlockExplosiveBarrel;
@@ -27,7 +28,9 @@ public class InitBlocks
 	public static Block blockGemOre, blockGemstone;
 	public static Block blockMetalOre;
 	public static Block blockMetal;
-	public static Block blockMarble;
+	public static Block blockMarble, blockShadowstone;
+
+	public static Block blockShadewoodLog, blockShadewoodLeaves, blockShadewoodPlanks;
 
 	public static Block blockBarrel;
 	public static Block blockExplosiveBarrel;
@@ -50,6 +53,8 @@ public class InitBlocks
 		GameRegistry.registerBlock(blockGemstone, BaseItemBlockWithMetadata.class, "BlockGemstone");
 		blockMarble = new BlockMarble().setBlockName("blockMarble");
 		GameRegistry.registerBlock(blockMarble, BaseItemBlockWithMetadata.class, "BlockMarble");
+		blockShadowstone = new BlockShadowstone().setBlockName("blockShadowstone");
+		GameRegistry.registerBlock(blockShadowstone, BaseItemBlockWithMetadata.class, "BlockShadowstone");
 
 		blockBarrel = new BlockBarrel().setBlockName("blockBarrel");
 		GameRegistry.registerBlock(blockBarrel, "BlockBarrel");

@@ -10,7 +10,7 @@
  * (http://www.minecraftforum.net/topic/251532-181-steamcraft-source-code-releasedmlv054wip/)
  *
  */
-package fantasykingdoms.common.items;
+package fantasykingdoms.common.items.tools;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -20,29 +20,18 @@ import net.minecraft.item.ItemStack;
  * @author Surseance
  *
  */
-public class ItemModPickaxe extends ItemModTool
+public class ItemModShovel extends ItemModTool
 {
-	public ItemModPickaxe(ToolMaterial mat)
+
+	public ItemModShovel(ToolMaterial mat)
 	{
 		super(mat.getDamageVsEntity() + 1.0F, mat);
-		this.setHarvestLevel("pickaxe", mat.getHarvestLevel());
-	}
-
-	@Override
-	public float getDigSpeed(ItemStack stack, Block block, int metadata)
-	{
-
-		if (block.getMaterial() == Material.rock)
-		{
-			return this.efficiencyOnProperMaterial;
-		}
-
-		return super.getDigSpeed(stack, block, metadata);
+		this.setHarvestLevel("shovel", mat.getHarvestLevel());
 	}
 
 	@Override
 	public boolean canHarvestBlock(Block block, ItemStack stack)
 	{
-		return (block.getMaterial() == Material.rock) || super.canHarvestBlock(block, stack);
+		return (block.getMaterial() == Material.snow) || super.canHarvestBlock(block, stack);
 	}
 }

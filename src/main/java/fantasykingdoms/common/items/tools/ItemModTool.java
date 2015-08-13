@@ -10,7 +10,7 @@
  * (http://www.minecraftforum.net/topic/251532-181-steamcraft-source-code-releasedmlv054wip/)
  *
  */
-package fantasykingdoms.common.items;
+package fantasykingdoms.common.items.tools;
 
 import java.util.List;
 
@@ -31,6 +31,7 @@ import net.minecraftforge.common.ForgeHooks;
 
 import boilerplate.common.utils.ItemStackUtils;
 import com.google.common.collect.Multimap;
+import fantasykingdoms.common.items.BaseItem;
 
 /**
  * @author Surseance

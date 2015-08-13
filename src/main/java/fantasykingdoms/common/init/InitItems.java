@@ -7,11 +7,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import boilerplate.common.utils.helpers.RegistryHelper;
 import fantasykingdoms.common.items.ItemGem;
 import fantasykingdoms.common.items.ItemIngot;
-import fantasykingdoms.common.items.ItemModAxe;
-import fantasykingdoms.common.items.ItemModHoe;
-import fantasykingdoms.common.items.ItemModPickaxe;
-import fantasykingdoms.common.items.ItemModShovel;
-import fantasykingdoms.common.items.ItemModSword;
 import fantasykingdoms.common.items.ItemNormalArmor;
 import fantasykingdoms.common.items.ItemNugget;
 import fantasykingdoms.common.items.ItemStygiumRing;
@@ -19,6 +14,11 @@ import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemRune;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
+import fantasykingdoms.common.items.tools.ItemModAxe;
+import fantasykingdoms.common.items.tools.ItemModHoe;
+import fantasykingdoms.common.items.tools.ItemModPickaxe;
+import fantasykingdoms.common.items.tools.ItemModShovel;
+import fantasykingdoms.common.items.tools.ItemModSword;
 import fantasykingdoms.common.lib.ModInfo;
 import fantasykingdoms.common.util.MaterialHelper;
 
@@ -39,6 +39,8 @@ public class InitItems
 	public static Item itemChainmailHelmet, itemChainmailChestplate, itemChainmailLeggings, itemChainmailBoots;
 	// Crowned Helmet | Golden, with Red Cloak
 	public static Item itemKingHelmet, itemKingChestplate, itemKingLeggings, itemKingBoots;
+	//
+	public static Item itemHellfireHelmet, itemHellfireChestplate, itemHellfireLeggings, itemHellfireBoots;
 
 	public static Item itemJewelledSword, itemJewelledPickaxe, itemJewelledAxe, itemJewelledShovel, itemJewelledHoe;
 

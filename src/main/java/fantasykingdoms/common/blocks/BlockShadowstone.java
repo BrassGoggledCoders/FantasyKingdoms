@@ -20,11 +20,11 @@ import fantasykingdoms.common.lib.ModInfo;
 /**
  * Created by Toby on 15/02/2015.
  */
-public class BlockMarble extends BaseMetadataBlock
+public class BlockShadowstone extends BaseMetadataBlock
 {
 	public IIcon[] icon = new IIcon[4];
 
-	public BlockMarble()
+	public BlockShadowstone()
 	{
 		super(Material.rock);
 		this.setStepSound(soundTypeStone);
@@ -43,10 +43,10 @@ public class BlockMarble extends BaseMetadataBlock
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "blockMarbleRaw");
-		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "blockMarblePolished");
-		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "blockMarbleBricks");
-		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "blockMarbleCarved");
+		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "blockShadowstoneRaw");
+		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "blockShadowstonePolished");
+		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "blockShadowstoneBricks");
+		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "blockShadowstoneCarved");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -56,7 +56,7 @@ public class BlockMarble extends BaseMetadataBlock
 	{
 		for (int var4 = 0; var4 < this.icon.length; ++var4)
 		{
-			l.add(new ItemStack(InitBlocks.blockMarble, 1, var4));
+			l.add(new ItemStack(InitBlocks.blockShadowstone, 1, var4));
 		}
 	}
 }
