@@ -1,40 +1,31 @@
 package fantasykingdoms.common.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+import boilerplate.common.baseclasses.BaseMetadataBlock;
+import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitBlocks;
-import fantasykingdoms.common.init.InitItems;
 import fantasykingdoms.common.lib.Reference;
 
-public class BlockGemstone extends BlockOre
+public class BlockGemstone extends BaseMetadataBlock
 {
 	public IIcon[] icon = new IIcon[4];
 
 	public BlockGemstone()
 	{
-		super();
+		super(Material.rock);
 		this.setHardness(2.0F);
-	}
-
-	@Override
-	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune)
-	{
-		ArrayList<ItemStack> drop = new ArrayList<ItemStack>();
-
-		drop.add(new ItemStack(InitItems.itemGem, metadata));
-
-		return drop;
+		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
 	}
 
 	@Override

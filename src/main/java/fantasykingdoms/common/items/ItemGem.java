@@ -32,7 +32,7 @@ import fantasykingdoms.common.lib.Reference;
  */
 public class ItemGem extends BaseItemWithMetadata
 {
-	IIcon[] itemIcon = new IIcon[3];
+	IIcon[] itemIcon = new IIcon[4];
 
 	public ItemGem()
 	{

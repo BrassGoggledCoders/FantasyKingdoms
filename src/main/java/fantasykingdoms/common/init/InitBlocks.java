@@ -47,7 +47,7 @@ public class InitBlocks
 		blockMetal = new BlockMetal().setBlockName("blockMetal");
 		GameRegistry.registerBlock(blockMetal, BaseItemBlockWithMetadata.class, "BlockMetal");
 		blockGemstone = new BlockGemstone().setBlockName("blockGemstone");
-		GameRegistry.registerBlock(blockGemstone, "BlockGemstone");
+		GameRegistry.registerBlock(blockGemstone, BaseItemBlockWithMetadata.class, "BlockGemstone");
 		blockMarble = new BlockMarble().setBlockName("blockMarble");
 		GameRegistry.registerBlock(blockMarble, BaseItemBlockWithMetadata.class, "BlockMarble");
 
