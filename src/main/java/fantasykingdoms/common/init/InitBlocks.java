@@ -10,6 +10,7 @@ import net.minecraftforge.fluids.Fluid;
 import boilerplate.common.baseclasses.BaseItemBlockWithMetadata;
 import fantasykingdoms.common.blocks.BaseBlock;
 import fantasykingdoms.common.blocks.BlockFog;
+import fantasykingdoms.common.blocks.BlockGemstone;
 import fantasykingdoms.common.blocks.BlockGemstoneOre;
 import fantasykingdoms.common.blocks.BlockInvisLight;
 import fantasykingdoms.common.blocks.BlockMarble;
@@ -23,7 +24,7 @@ public class InitBlocks
 {
 	public static Fluid beerFluid, treasureFluid;
 
-	public static Block blockGemOre;
+	public static Block blockGemOre, blockGemstone;
 	public static Block blockMetalOre;
 	public static Block blockMetal;
 	public static Block blockMarble;
@@ -45,6 +46,8 @@ public class InitBlocks
 		GameRegistry.registerBlock(blockMetalOre, BaseItemBlockWithMetadata.class, "BlockMetalOre");
 		blockMetal = new BlockMetal().setBlockName("blockMetal");
 		GameRegistry.registerBlock(blockMetal, BaseItemBlockWithMetadata.class, "BlockMetal");
+		blockGemstone = new BlockGemstone().setBlockName("blockGemstone");
+		GameRegistry.registerBlock(blockGemstone, "BlockGemstone");
 		blockMarble = new BlockMarble().setBlockName("blockMarble");
 		GameRegistry.registerBlock(blockMarble, BaseItemBlockWithMetadata.class, "BlockMarble");
 

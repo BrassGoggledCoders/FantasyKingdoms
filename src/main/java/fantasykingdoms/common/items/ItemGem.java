@@ -46,6 +46,7 @@ public class ItemGem extends BaseItemWithMetadata
 		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemRuby");
 		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemSapphire");
 		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemAmethyst");
+		this.itemIcon[3] = ir.registerIcon(Reference.PREFIX + "itemTopaz");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -53,7 +54,7 @@ public class ItemGem extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item item, CreativeTabs tab, List l)
 	{
-		for (int var4 = 0; var4 < 3; ++var4)
+		for (int var4 = 0; var4 < itemIcon.length; ++var4)
 		{
 			l.add(new ItemStack(InitItems.itemGem, 1, var4));
 		}

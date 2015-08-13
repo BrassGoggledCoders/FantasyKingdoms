@@ -17,20 +17,14 @@ import fantasykingdoms.common.init.InitBlocks;
 import fantasykingdoms.common.init.InitItems;
 import fantasykingdoms.common.lib.Reference;
 
-public class BlockGemstoneOre extends BlockOre
+public class BlockGemstone extends BlockOre
 {
 	public IIcon[] icon = new IIcon[4];
 
-	public BlockGemstoneOre()
+	public BlockGemstone()
 	{
 		super();
 		this.setHardness(2.0F);
-	}
-
-	@Override
-	public boolean canSilkHarvest()
-	{
-		return true;
 	}
 
 	@Override
@@ -54,10 +48,10 @@ public class BlockGemstoneOre extends BlockOre
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockRubyOre");
-		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockSapphireOre");
-		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockAmethystOre");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockTopazOre");
+		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockRuby");
+		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockSapphire");
+		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockAmethyst");
+		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockTopaz");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -67,7 +61,7 @@ public class BlockGemstoneOre extends BlockOre
 	{
 		for (int var4 = 0; var4 < this.icon.length; ++var4)
 		{
-			l.add(new ItemStack(InitBlocks.blockGemOre, 1, var4));
+			l.add(new ItemStack(InitBlocks.blockGemstone, 1, var4));
 		}
 	}
 }
