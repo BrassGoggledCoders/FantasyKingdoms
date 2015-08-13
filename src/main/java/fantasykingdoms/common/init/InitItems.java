@@ -86,6 +86,14 @@ public class InitItems
 
 		RegistryHelper.registerArmorSet(itemPlateHelmet, itemPlateChestplate, itemPlateLeggings, itemPlateBoots, "Plate", ModInfo.MODID);
 
+		itemChainmailHelmet = new ItemNormalArmor(MaterialHelper.ARMOR_CHAINMAIL, 0, "chainmail").setUnlocalizedName("itemHelmetChainmail");
+		itemChainmailChestplate = new ItemNormalArmor(MaterialHelper.ARMOR_CHAINMAIL, 1, "chainmail").setUnlocalizedName("itemChainmailChestplate");
+		itemChainmailLeggings = new ItemNormalArmor(MaterialHelper.ARMOR_CHAINMAIL, 2, "chainmail").setUnlocalizedName("itemLegsChainmail");
+		itemChainmailBoots = new ItemNormalArmor(MaterialHelper.ARMOR_CHAINMAIL, 3, "chainmail").setUnlocalizedName("itemBootsChainmail");
+
+		RegistryHelper.registerArmorSet(itemChainmailHelmet, itemChainmailChestplate, itemChainmailLeggings, itemChainmailBoots, "Chainmail",
+				ModInfo.MODID);
+
 		// Jewelled
 		itemJewelledPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemPickaxeJewelled");
 		itemJewelledSword = new ItemModSword(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemSwordJewelled");
