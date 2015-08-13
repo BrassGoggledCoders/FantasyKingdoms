@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import boilerplate.common.baseclasses.BaseMetadataBlock;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitBlocks;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 /**
  * Created by Toby on 15/02/2015.
@@ -43,12 +43,12 @@ public class BlockMetal extends BaseMetadataBlock
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockCopper");
-		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockTin");
-		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockSilver");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockLead");
-		this.icon[4] = ir.registerIcon(Reference.PREFIX + "blockMithril");
-		this.icon[5] = ir.registerIcon(Reference.PREFIX + "blockStygium");
+		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "blockCopper");
+		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "blockTin");
+		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "blockSilver");
+		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "blockLead");
+		this.icon[4] = ir.registerIcon(ModInfo.PREFIX + "blockMithril");
+		this.icon[5] = ir.registerIcon(ModInfo.PREFIX + "blockStygium");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

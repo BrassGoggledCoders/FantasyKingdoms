@@ -2,7 +2,7 @@ package fantasykingdoms.common.util;
 
 import cpw.mods.fml.common.FMLLog;
 
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 import org.apache.logging.log4j.Level;
 
 public class LogHelper
@@ -10,7 +10,7 @@ public class LogHelper
 
 	public static void log(Level logLevel, Object object)
 	{
-		FMLLog.log(Reference.NAME, logLevel, String.valueOf(object));
+		FMLLog.log(ModInfo.NAME, logLevel, String.valueOf(object));
 	}
 
 	public void all(Object object)

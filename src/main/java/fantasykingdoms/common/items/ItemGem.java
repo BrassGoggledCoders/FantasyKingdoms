@@ -24,7 +24,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import fantasykingdoms.common.init.InitItems;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 /**
  * @author warlordjones
@@ -43,10 +43,10 @@ public class ItemGem extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemRuby");
-		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemSapphire");
-		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemAmethyst");
-		this.itemIcon[3] = ir.registerIcon(Reference.PREFIX + "itemTopaz");
+		this.itemIcon[0] = ir.registerIcon(ModInfo.PREFIX + "itemRuby");
+		this.itemIcon[1] = ir.registerIcon(ModInfo.PREFIX + "itemSapphire");
+		this.itemIcon[2] = ir.registerIcon(ModInfo.PREFIX + "itemAmethyst");
+		this.itemIcon[3] = ir.registerIcon(ModInfo.PREFIX + "itemTopaz");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

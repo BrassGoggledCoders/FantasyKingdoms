@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import fantasykingdoms.common.init.InitBlocks;
 import fantasykingdoms.common.init.InitItems;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 public class BlockGemstoneOre extends BlockOre
 {
@@ -54,10 +54,10 @@ public class BlockGemstoneOre extends BlockOre
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockRubyOre");
-		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockSapphireOre");
-		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockAmethystOre");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockTopazOre");
+		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "blockRubyOre");
+		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "blockSapphireOre");
+		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "blockAmethystOre");
+		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "blockTopazOre");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

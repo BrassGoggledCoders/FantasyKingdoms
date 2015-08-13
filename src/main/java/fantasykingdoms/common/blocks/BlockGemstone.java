@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import boilerplate.common.baseclasses.BaseMetadataBlock;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitBlocks;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 public class BlockGemstone extends BaseMetadataBlock
 {
@@ -39,10 +39,10 @@ public class BlockGemstone extends BaseMetadataBlock
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockRuby");
-		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockSapphire");
-		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockAmethyst");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockTopaz");
+		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "blockRuby");
+		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "blockSapphire");
+		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "blockAmethyst");
+		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "blockTopaz");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

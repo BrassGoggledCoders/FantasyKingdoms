@@ -12,13 +12,14 @@ import fantasykingdoms.common.items.ItemModHoe;
 import fantasykingdoms.common.items.ItemModPickaxe;
 import fantasykingdoms.common.items.ItemModShovel;
 import fantasykingdoms.common.items.ItemModSword;
+import fantasykingdoms.common.items.ItemNormalArmor;
 import fantasykingdoms.common.items.ItemNugget;
 import fantasykingdoms.common.items.ItemStygiumRing;
 import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemRune;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 import fantasykingdoms.common.util.MaterialHelper;
 
 /**
@@ -33,7 +34,11 @@ public class InitItems
 	public static Item itemEmptyTankard;
 	public static Item itemFullTankard;
 
-	public static Item itemStygiumRing;
+	public static Item itemPlateHelmet, itemPlateChestplate, itemPlateLeggings, itemPlateBoots;
+	// Tunic
+	public static Item itemChainmailHelmet, itemChainmailChestplate, itemChainmailLeggings, itemChainmailBoots;
+	// Crowned Helmet | Golden, with Red Cloak
+	public static Item itemKingHelmet, itemKingChestplate, itemKingLeggings, itemKingBoots;
 
 	public static Item itemJewelledSword, itemJewelledPickaxe, itemJewelledAxe, itemJewelledShovel, itemJewelledHoe;
 
@@ -43,9 +48,16 @@ public class InitItems
 
 	public static Item itemStoneHammer, itemIronHammer, itemGoldHammer, itemDiamondHammer, itemJewelledHammer, itemSilverHammer, itemMithrilHammer;
 
+	public static Item itemStoneBattleaxe, itemIronBattleaxe, itemGoldBattleaxe, itemDiamondBattleaxe, itemJewelledBattleaxe, itemSilverBattleaxe,
+			itemMithrilBattleaxe;
+
+	public static Item itemRuneblade;
+
+	public static Item itemStygiumRing;
+
 	public static Item itemWizardsKey;
 
-	public static Item itemRune, itemSigil, itemRunicAmulet, itemRunicRing;
+	public static Item itemRune;
 
 	public static void registerItems()
 	{
@@ -67,6 +79,13 @@ public class InitItems
 		itemWizardsKey = new ItemWizardsKey().setUnlocalizedName("itemWizardsKey");
 		// GameRegistry.registerItem(itemWizardsKey, "ItemWizardsKey");
 
+		itemPlateHelmet = new ItemNormalArmor(MaterialHelper.ARMOR_PLATE, 0, "plate").setUnlocalizedName("itemHelmetPlate");
+		itemPlateChestplate = new ItemNormalArmor(MaterialHelper.ARMOR_PLATE, 1, "plate").setUnlocalizedName("itemChestplatePlate");
+		itemPlateLeggings = new ItemNormalArmor(MaterialHelper.ARMOR_PLATE, 2, "plate").setUnlocalizedName("itemLegsPlate");
+		itemPlateBoots = new ItemNormalArmor(MaterialHelper.ARMOR_PLATE, 3, "plate").setUnlocalizedName("itemBootsPlate");
+
+		RegistryHelper.registerArmorSet(itemPlateHelmet, itemPlateChestplate, itemPlateLeggings, itemPlateBoots, "Plate", ModInfo.MODID);
+
 		// Jewelled
 		itemJewelledPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemPickaxeJewelled");
 		itemJewelledSword = new ItemModSword(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemSwordJewelled");
@@ -75,7 +94,7 @@ public class InitItems
 		itemJewelledHoe = new ItemModHoe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemHoeJewelled");
 
 		RegistryHelper.registerToolSet(itemJewelledSword, itemJewelledShovel, itemJewelledPickaxe, itemJewelledAxe, itemJewelledHoe, "Jewelled",
-				Reference.MODID);
+				ModInfo.MODID);
 
 		// Silver
 		itemSilverPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemPickaxeSilver");
@@ -84,7 +103,7 @@ public class InitItems
 		itemSilverAxe = new ItemModAxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemAxeSilver");
 		itemSilverHoe = new ItemModHoe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemHoeSilver");
 
-		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", Reference.MODID);
+		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", ModInfo.MODID);
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
 		GameRegistry.registerItem(itemRune, "ItemRune");

@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import boilerplate.common.baseclasses.BaseMetadataBlock;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitBlocks;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 /**
  * Created by Toby on 15/02/2015.
@@ -44,11 +44,11 @@ public class BlockOre extends BaseMetadataBlock
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockCopperOre");
-		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockTinOre");
-		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockSilverOre");
-		this.icon[3] = ir.registerIcon(Reference.PREFIX + "blockLeadOre");
-		this.icon[4] = ir.registerIcon(Reference.PREFIX + "blockMithrilOre");
+		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "blockCopperOre");
+		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "blockTinOre");
+		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "blockSilverOre");
+		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "blockLeadOre");
+		this.icon[4] = ir.registerIcon(ModInfo.PREFIX + "blockMithrilOre");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

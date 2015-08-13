@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import boilerplate.common.baseclasses.BaseMetadataBlock;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitBlocks;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 /**
  * Created by Toby on 15/02/2015.
@@ -43,9 +43,9 @@ public class BlockMarble extends BaseMetadataBlock
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(Reference.PREFIX + "blockMarbleRaw");
-		this.icon[1] = ir.registerIcon(Reference.PREFIX + "blockMarblePolished");
-		this.icon[2] = ir.registerIcon(Reference.PREFIX + "blockMarbleBricks");
+		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "blockMarbleRaw");
+		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "blockMarblePolished");
+		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "blockMarbleBricks");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

@@ -12,31 +12,33 @@
  */
 package fantasykingdoms.common.items;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemStack;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import boilerplate.common.baseclasses.RootItem;
-import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.lib.ModInfo;
 
 /**
- * @author warlordjones
+ * @author Decebaldecebal
  *
  */
-public class BaseItem extends RootItem
+public class ItemNormalArmor extends BaseArmor
 {
-	public BaseItem()
+	String textureName;
+
+	public ItemNormalArmor(ArmorMaterial mat, int type, String textureName)
 	{
-		super();
-		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		super(mat, 0, type);
+		this.textureName = textureName;
 	}
 
-	@SideOnly(Side.CLIENT)
+	// TODO - move to basearmor
 	@Override
-	public void registerIcons(IIconRegister par1IconRegister)
+	@SideOnly(Side.CLIENT)
+	public String getArmorTexture(ItemStack is, Entity entity, int slot, String type)
 	{
-		this.itemIcon = par1IconRegister.registerIcon(ModInfo.PREFIX + this.getUnlocalizedName().substring(5));
+		return slot == 2 ? ModInfo.PREFIX + "textures/models/armor/" + type + "_2.png" : ModInfo.PREFIX + "textures/models/armor/" + type + "_1.png";
 	}
 }

@@ -18,22 +18,22 @@ import fantasykingdoms.common.init.InitConfig;
 import fantasykingdoms.common.init.InitItems;
 import fantasykingdoms.common.init.InitRecipes;
 import fantasykingdoms.common.lib.CreativeTabFantasyKingdoms;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 import fantasykingdoms.common.util.LogHelper;
 import fantasykingdoms.common.util.MaterialHelper;
 import fantasykingdoms.common.util.OreDictionaryHandler;
 import fantasykingdoms.common.worldgen.WorldGeneratorFantasyKingdoms;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.Version, dependencies = "required-after:boilerplate; required-after:Baubles")
+@Mod(modid = ModInfo.MODID, name = ModInfo.NAME, version = ModInfo.Version, dependencies = "required-after:boilerplate; required-after:Baubles")
 public class FantasyKingdoms
 {
 	@Mod.Instance("FantasyKingdoms")
 	public static FantasyKingdoms modInstance;
 
-	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
+	@SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.COMMON_PROXY)
 	public static CommonProxy proxy;
 
-	public static CreativeTabs tabKingdoms = new CreativeTabFantasyKingdoms(Reference.MODID);
+	public static CreativeTabs tabKingdoms = new CreativeTabFantasyKingdoms(ModInfo.MODID);
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)

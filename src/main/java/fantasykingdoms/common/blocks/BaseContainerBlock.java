@@ -9,7 +9,7 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 public abstract class BaseContainerBlock extends BlockContainer
 {
@@ -24,7 +24,7 @@ public abstract class BaseContainerBlock extends BlockContainer
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister ir)
 	{
-		this.blockIcon = ir.registerIcon(Reference.PREFIX + this.getUnlocalizedName().substring(5));
+		this.blockIcon = ir.registerIcon(ModInfo.PREFIX + this.getUnlocalizedName().substring(5));
 	}
 
 	/**

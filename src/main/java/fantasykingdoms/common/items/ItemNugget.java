@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitItems;
-import fantasykingdoms.common.lib.Reference;
+import fantasykingdoms.common.lib.ModInfo;
 
 /**
  * @author warlordjones
@@ -45,12 +45,12 @@ public class ItemNugget extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon[0] = ir.registerIcon(Reference.PREFIX + "itemCopperNugget");
-		this.itemIcon[1] = ir.registerIcon(Reference.PREFIX + "itemTinNugget");
-		this.itemIcon[2] = ir.registerIcon(Reference.PREFIX + "itemSilverNugget");
-		this.itemIcon[3] = ir.registerIcon(Reference.PREFIX + "itemLeadNugget");
-		this.itemIcon[4] = ir.registerIcon(Reference.PREFIX + "itemMithrilNugget");
-		this.itemIcon[5] = ir.registerIcon(Reference.PREFIX + "itemStygiumNugget");
+		this.itemIcon[0] = ir.registerIcon(ModInfo.PREFIX + "itemCopperNugget");
+		this.itemIcon[1] = ir.registerIcon(ModInfo.PREFIX + "itemTinNugget");
+		this.itemIcon[2] = ir.registerIcon(ModInfo.PREFIX + "itemSilverNugget");
+		this.itemIcon[3] = ir.registerIcon(ModInfo.PREFIX + "itemLeadNugget");
+		this.itemIcon[4] = ir.registerIcon(ModInfo.PREFIX + "itemMithrilNugget");
+		this.itemIcon[5] = ir.registerIcon(ModInfo.PREFIX + "itemStygiumNugget");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

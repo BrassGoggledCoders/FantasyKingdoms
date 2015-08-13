@@ -3,7 +3,7 @@ package fantasykingdoms.common.lib;
 /**
  * Created by Toby on 14/02/2015.
  */
-public class Reference
+public class ModInfo
 {
 	public static final String MODID = "fantasykingdoms";
 
