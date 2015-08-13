@@ -17,8 +17,8 @@ import net.minecraft.item.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import fantasykingdoms.common.init.InitItems;
 import boilerplate.common.baseclasses.CreativeTabBase;
+import fantasykingdoms.common.init.InitItems;
 
 /**
  * @author warlordjones
@@ -26,9 +26,9 @@ import boilerplate.common.baseclasses.CreativeTabBase;
  */
 public class CreativeTabFantasyKingdoms extends CreativeTabBase
 {
-	public CreativeTabFantasyKingdoms(int id, String name)
+	public CreativeTabFantasyKingdoms(String name)
 	{
-		super(id, name);
+		super(name);
 	}
 
 	@Override

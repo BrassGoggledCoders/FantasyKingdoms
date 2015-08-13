@@ -55,6 +55,9 @@ options.txt
 /logs
 /config
 /crash-reports
+/screenshots
+/mods
+usernamecache.json
 
 forge-1.7.2-10.12.1.1085-changelog.txt
 

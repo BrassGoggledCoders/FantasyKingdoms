@@ -20,16 +20,11 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import cpw.mods.fml.common.Optional;
-
-import dynamicswordskills.api.ISword;
-
 /**
  * @author Surseance
  * 
  */
-@Optional.Interface(iface = "dynamicswordskills.api.ISword", modid = "DynamicSwordSkills")
-public class ItemModSword extends ItemModTool implements ISword
+public class ItemModSword extends ItemModTool
 {
 	public ItemModSword(ToolMaterial mat)
 	{
@@ -42,7 +37,7 @@ public class ItemModSword extends ItemModTool implements ISword
 	@Override
 	public float getDigSpeed(ItemStack stack, Block block, int metadata)
 	{
-		if(block == Blocks.web)
+		if (block == Blocks.web)
 			return 15.0F;
 		return super.getDigSpeed(stack, block, metadata);
 	}
@@ -50,7 +45,7 @@ public class ItemModSword extends ItemModTool implements ISword
 	@Override
 	public boolean onBlockDestroyed(ItemStack stack, World world, Block block, int x, int y, int z, EntityLivingBase living)
 	{
-		if(block.getBlockHardness(world, x, y, z) != 0.0D)
+		if (block.getBlockHardness(world, x, y, z) != 0.0D)
 			stack.damageItem(2, living);
 
 		return true;

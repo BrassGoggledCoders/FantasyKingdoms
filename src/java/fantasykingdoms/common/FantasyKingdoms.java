@@ -11,6 +11,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+import net.minecraftforge.common.MinecraftForge;
+
 import fantasykingdoms.common.init.InitBlocks;
 import fantasykingdoms.common.init.InitConfig;
 import fantasykingdoms.common.init.InitItems;
@@ -22,8 +24,6 @@ import fantasykingdoms.common.util.MaterialHelper;
 import fantasykingdoms.common.util.OreDictionaryHandler;
 import fantasykingdoms.common.worldgen.WorldGeneratorFantasyKingdoms;
 
-import net.minecraftforge.common.MinecraftForge;
-
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.Version, dependencies = "required-after:boilerplate; required-after:Baubles")
 public class FantasyKingdoms
 {
@@ -33,7 +33,7 @@ public class FantasyKingdoms
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy;
 
-	public static CreativeTabs tabKingdoms = new CreativeTabFantasyKingdoms(CreativeTabs.getNextID(), Reference.MODID);
+	public static CreativeTabs tabKingdoms = new CreativeTabFantasyKingdoms(Reference.MODID);
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
