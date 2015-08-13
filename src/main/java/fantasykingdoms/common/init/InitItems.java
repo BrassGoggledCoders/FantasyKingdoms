@@ -1,10 +1,17 @@
 package fantasykingdoms.common.init;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
+import boilerplate.common.baseclasses.tools.BaseAxe;
+import boilerplate.common.baseclasses.tools.BaseHoe;
+import boilerplate.common.baseclasses.tools.BasePickaxe;
+import boilerplate.common.baseclasses.tools.BaseShovel;
+import boilerplate.common.baseclasses.tools.BaseSword;
 import boilerplate.common.utils.helpers.RegistryHelper;
+import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.items.ItemGem;
 import fantasykingdoms.common.items.ItemIngot;
 import fantasykingdoms.common.items.ItemNormalArmor;
@@ -14,11 +21,7 @@ import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemRune;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
-import fantasykingdoms.common.items.tools.ItemModAxe;
-import fantasykingdoms.common.items.tools.ItemModHoe;
-import fantasykingdoms.common.items.tools.ItemModPickaxe;
-import fantasykingdoms.common.items.tools.ItemModShovel;
-import fantasykingdoms.common.items.tools.ItemModSword;
+import fantasykingdoms.common.items.tools.ItemModBattleaxe;
 import fantasykingdoms.common.lib.ModInfo;
 import fantasykingdoms.common.util.MaterialHelper;
 
@@ -100,23 +103,38 @@ public class InitItems
 				ModInfo.MODID);
 
 		// Jewelled
-		itemJewelledPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemPickaxeJewelled");
-		itemJewelledSword = new ItemModSword(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemSwordJewelled");
-		itemJewelledShovel = new ItemModShovel(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemShovelJewelled");
-		itemJewelledAxe = new ItemModAxe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemAxeJewelled");
-		itemJewelledHoe = new ItemModHoe(MaterialHelper.TOOL_JEWELLED).setUnlocalizedName("itemHoeJewelled");
+		itemJewelledPickaxe = new BasePickaxe(MaterialHelper.TOOL_JEWELLED, ModInfo.PREFIX).setUnlocalizedName("itemPickaxeJewelled")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemJewelledSword = new BaseSword(MaterialHelper.TOOL_JEWELLED, ModInfo.PREFIX).setUnlocalizedName("itemSwordJewelled")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemJewelledShovel = new BaseShovel(MaterialHelper.TOOL_JEWELLED, ModInfo.PREFIX).setUnlocalizedName("itemShovelJewelled")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemJewelledAxe = new BaseAxe(MaterialHelper.TOOL_JEWELLED, ModInfo.PREFIX).setUnlocalizedName("itemAxeJewelled")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemJewelledHoe = new BaseHoe(MaterialHelper.TOOL_JEWELLED, ModInfo.PREFIX).setUnlocalizedName("itemHoeJewelled")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
 
 		RegistryHelper.registerToolSet(itemJewelledSword, itemJewelledShovel, itemJewelledPickaxe, itemJewelledAxe, itemJewelledHoe, "Jewelled",
 				ModInfo.MODID);
 
 		// Silver
-		itemSilverPickaxe = new ItemModPickaxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemPickaxeSilver");
-		itemSilverSword = new ItemModSword(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemSwordSilver");
-		itemSilverShovel = new ItemModShovel(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemShovelSilver");
-		itemSilverAxe = new ItemModAxe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemAxeSilver");
-		itemSilverHoe = new ItemModHoe(MaterialHelper.TOOL_SILVER).setUnlocalizedName("itemHoeSilver");
+		itemSilverPickaxe = new BasePickaxe(MaterialHelper.TOOL_SILVER, ModInfo.PREFIX).setUnlocalizedName("itemPickaxeSilver")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemSilverSword = new BaseSword(MaterialHelper.TOOL_SILVER, ModInfo.PREFIX).setUnlocalizedName("itemSwordSilver")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemSilverShovel = new BaseShovel(MaterialHelper.TOOL_SILVER, ModInfo.PREFIX).setUnlocalizedName("itemShovelSilver")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemSilverAxe = new BaseAxe(MaterialHelper.TOOL_SILVER, ModInfo.PREFIX).setUnlocalizedName("itemAxeSilver")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemSilverHoe = new BaseHoe(MaterialHelper.TOOL_SILVER, ModInfo.PREFIX).setUnlocalizedName("itemHoeSilver")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
 
 		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", ModInfo.MODID);
+
+		itemStoneBattleaxe = new ItemModBattleaxe(ToolMaterial.STONE).setUnlocalizedName("itemBattleaxeStone");
+		itemIronBattleaxe = new ItemModBattleaxe(ToolMaterial.IRON).setUnlocalizedName("itemBattleaxeIron");
+		itemGoldBattleaxe = new ItemModBattleaxe(ToolMaterial.GOLD).setUnlocalizedName("itemBattleaxeGold");
+		itemDiamondBattleaxe = new ItemModBattleaxe(ToolMaterial.EMERALD).setUnlocalizedName("itemBattleaxeDiamond");
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
 		GameRegistry.registerItem(itemRune, "ItemRune");

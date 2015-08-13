@@ -12,47 +12,27 @@
  */
 package fantasykingdoms.common.items.tools;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import boilerplate.common.baseclasses.tools.BaseTool;
+import fantasykingdoms.common.FantasyKingdoms;
+import fantasykingdoms.common.lib.ModInfo;
 
 /**
  * @author Surseance
  *
  */
-public class ItemModSword extends ItemModTool
+public class ItemModBattleaxe extends BaseTool
 {
-	public ItemModSword(ToolMaterial mat)
-	{
-		super(mat.getDamageVsEntity() + 4.0F, mat);
-		this.maxStackSize = 1;
-		this.setMaxDamage(mat.getMaxUses());
-		this.setHarvestLevel("sword", mat.getHarvestLevel());
-	}
 
-	@Override
-	public float getDigSpeed(ItemStack stack, Block block, int metadata)
+	public ItemModBattleaxe(ToolMaterial mat)
 	{
-		if (block == Blocks.web)
-		{
-			return 15.0F;
-		}
-		return super.getDigSpeed(stack, block, metadata);
-	}
-
-	@Override
-	public boolean onBlockDestroyed(ItemStack stack, World world, Block block, int x, int y, int z, EntityLivingBase living)
-	{
-		if (block.getBlockHardness(world, x, y, z) != 0.0D)
-		{
-			stack.damageItem(2, living);
-		}
-
-		return true;
+		super(mat.getDamageVsEntity() + 4.0F, mat, ModInfo.PREFIX);
+		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		this.setHarvestLevel("axe", mat.getHarvestLevel());
 	}
 
 	@Override
@@ -72,12 +52,6 @@ public class ItemModSword extends ItemModTool
 	{
 		player.setItemInUse(stack, this.getMaxItemUseDuration(stack));
 		return stack;
-	}
-
-	@Override
-	public boolean canHarvestBlock(Block block, ItemStack itemstack)
-	{
-		return block == Blocks.web;
 	}
 
 	@Override
