@@ -7,7 +7,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
@@ -19,6 +18,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import fantasykingdoms.common.blocks.BaseBlock;
+import fantasykingdoms.common.entity.EntityBarrelPrimed;
 
 public class BlockExplosiveBarrel extends BaseBlock
 {
@@ -79,7 +79,7 @@ public class BlockExplosiveBarrel extends BaseBlock
 	{
 		if (!p_149723_1_.isRemote)
 		{
-			EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(p_149723_1_, p_149723_2_ + 0.5F, p_149723_3_ + 0.5F, p_149723_4_ + 0.5F,
+			EntityBarrelPrimed entitytntprimed = new EntityBarrelPrimed(p_149723_1_, p_149723_2_ + 0.5F, p_149723_3_ + 0.5F, p_149723_4_ + 0.5F,
 					p_149723_5_.getExplosivePlacedBy());
 			entitytntprimed.fuse = p_149723_1_.rand.nextInt(entitytntprimed.fuse / 4) + (entitytntprimed.fuse / 8);
 			p_149723_1_.spawnEntityInWorld(entitytntprimed);
@@ -91,21 +91,20 @@ public class BlockExplosiveBarrel extends BaseBlock
 	 * y, z, metaData
 	 */
 	@Override
-	public void onBlockDestroyedByPlayer(World p_149664_1_, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
+	public void onBlockDestroyedByPlayer(World world, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
 	{
-		this.func_150114_a(p_149664_1_, p_149664_2_, p_149664_3_, p_149664_4_, p_149664_5_, null);
+		this.func_150114_a(world, p_149664_2_, p_149664_3_, p_149664_4_, p_149664_5_, null);
 	}
 
-	public void func_150114_a(World p_150114_1_, int p_150114_2_, int p_150114_3_, int p_150114_4_, int p_150114_5_, EntityLivingBase p_150114_6_)
+	public void func_150114_a(World world, int x, int y, int z, int p_150114_5_, EntityLivingBase p_150114_6_)
 	{
-		if (!p_150114_1_.isRemote)
+		if (!world.isRemote)
 		{
 			if ((p_150114_5_ & 1) == 1)
 			{
-				EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(p_150114_1_, p_150114_2_ + 0.5F, p_150114_3_ + 0.5F, p_150114_4_ + 0.5F,
-						p_150114_6_);
-				p_150114_1_.spawnEntityInWorld(entitytntprimed);
-				p_150114_1_.playSoundAtEntity(entitytntprimed, "game.tnt.primed", 1.0F, 1.0F);
+				EntityBarrelPrimed entitytntprimed = new EntityBarrelPrimed(world, x + 0.5F, y + 0.5F, z + 0.5F, p_150114_6_);
+				world.spawnEntityInWorld(entitytntprimed);
+				world.playSoundAtEntity(entitytntprimed, "game.tnt.primed", 1.0F, 1.0F);
 			}
 		}
 	}
@@ -114,19 +113,19 @@ public class BlockExplosiveBarrel extends BaseBlock
 	 * Called upon block activation (right click on the block.)
 	 */
 	@Override
-	public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_,
+	public boolean onBlockActivated(World world, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_,
 			float p_149727_7_, float p_149727_8_, float p_149727_9_)
 	{
 		if ((p_149727_5_.getCurrentEquippedItem() != null) && (p_149727_5_.getCurrentEquippedItem().getItem() == Items.flint_and_steel))
 		{
-			this.func_150114_a(p_149727_1_, p_149727_2_, p_149727_3_, p_149727_4_, 1, p_149727_5_);
-			p_149727_1_.setBlockToAir(p_149727_2_, p_149727_3_, p_149727_4_);
+			this.func_150114_a(world, p_149727_2_, p_149727_3_, p_149727_4_, 1, p_149727_5_);
+			world.setBlockToAir(p_149727_2_, p_149727_3_, p_149727_4_);
 			p_149727_5_.getCurrentEquippedItem().damageItem(1, p_149727_5_);
 			return true;
 		}
 		else
 		{
-			return super.onBlockActivated(p_149727_1_, p_149727_2_, p_149727_3_, p_149727_4_, p_149727_5_, p_149727_6_, p_149727_7_, p_149727_8_,
+			return super.onBlockActivated(world, p_149727_2_, p_149727_3_, p_149727_4_, p_149727_5_, p_149727_6_, p_149727_7_, p_149727_8_,
 					p_149727_9_);
 		}
 	}

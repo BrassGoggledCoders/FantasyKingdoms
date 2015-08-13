@@ -6,8 +6,4 @@ public class CommonProxy
 	{
 
 	}
-
-	public void bindRenderers()
-	{
-	}
 }

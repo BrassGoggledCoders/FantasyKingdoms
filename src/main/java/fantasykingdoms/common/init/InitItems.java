@@ -17,7 +17,6 @@ import fantasykingdoms.common.items.ItemStygiumRing;
 import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemRune;
-import fantasykingdoms.common.items.dwarven.ItemSigil;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
 import fantasykingdoms.common.lib.Reference;
 import fantasykingdoms.common.util.MaterialHelper;
@@ -89,7 +88,5 @@ public class InitItems
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
 		GameRegistry.registerItem(itemRune, "ItemRune");
-		itemSigil = new ItemSigil().setUnlocalizedName("itemSigil");
-		GameRegistry.registerItem(itemSigil, "ItemSigil");
 	}
 }
