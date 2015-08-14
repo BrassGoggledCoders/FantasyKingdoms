@@ -16,6 +16,7 @@ public class BlockInvisLight extends BaseBlock
 		this.setLightLevel(1F);
 		this.setTickRandomly(true);
 		this.setBlockBounds(0.40F, 0.40F, 0.40F, 0.60F, 0.60F, 0.60F);
+		this.setCreativeTab(null);
 	}
 
 	/**

@@ -9,5 +9,6 @@ public class BlockSolidFog extends BaseBlock
 		super(Material.rock);
 		this.setBlockUnbreakable();
 		this.setLightLevel(0.5F);
+		this.setCreativeTab(null);
 	}
 }
