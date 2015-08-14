@@ -93,18 +93,18 @@ item.itemRune.22.name=Othila
 item.itemRune.23.name=Dagaz
 item.itemHelmetPlate.name=Plate Helmet
 item.itemChestplatePlate.name=Plate Helmet
-item.itemLeggingsPlate.name=Plate Leggings
+item.itemLegsPlate.name=Plate Leggings
 item.itemBootsPlate.name=Plate Boots
 item.itemHelmetChainmail.name=Chainmail Helmet
-item.itemChestplateChainmail.name=Chainmail Tunic
-item.itemLeggingsChainmail.name=Chainmail Leggings
+item.itemChainmailChestplate.name=Chainmail Tunic
+item.itemLegsChainmail.name=Chainmail Leggings
 item.itemBootsChainmail.name=Chainmail Boots
 item.itemBattleaxeStone.name=Stone Battleaxe
 item.itemBattleaxeIron.name=Iron Battleaxe
 item.itemBattleaxeGold.name=Gold Battleaxe
 item.itemBattleaxeDiamond.name=Diamond Battleaxe
-item.itemJewelledBattleaxe.name=Jewelled Battleaxe
-item.itemSilverBattleaxe.name=Silver Battleaxe
+item.itemBattleaxeJewelled.name=Jewelled Battleaxe
+item.itemBattleaxeSilver.name=Silver Battleaxe
 
 #Other
 itemGroup.fantasykingdoms=Fantasy Kingdoms
