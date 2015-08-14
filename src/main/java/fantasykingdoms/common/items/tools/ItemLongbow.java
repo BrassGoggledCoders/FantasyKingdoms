@@ -16,12 +16,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.lib.ModInfo;
 
-public class ItemShortbow extends ItemBow
+public class ItemLongbow extends ItemBow
 {
-	public ItemShortbow()
+	public ItemLongbow()
 	{
 		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
-		this.setMaxDamage(284);
+		this.setMaxDamage(484);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -37,7 +37,7 @@ public class ItemShortbow extends ItemBow
 	@Override
 	public int getMaxItemUseDuration(ItemStack p_77626_1_)
 	{
-		return 50000;
+		return 92000;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class ItemShortbow extends ItemBow
 				p_77615_3_.inventory.consumeInventoryItem(Items.arrow);
 			}
 
-			entityarrow.setDamage(entityarrow.getDamage() / 2);
+			entityarrow.setDamage(entityarrow.getDamage() * 2);
 
 			if (!p_77615_2_.isRemote)
 			{
