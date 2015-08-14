@@ -37,7 +37,7 @@ public class ItemLongbow extends ItemBow
 	@Override
 	public int getMaxItemUseDuration(ItemStack p_77626_1_)
 	{
-		return 92000;
+		return 100000;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class ItemLongbow extends ItemBow
 				f = 1.0F;
 			}
 
-			EntityArrow entityarrow = new EntityArrow(p_77615_2_, p_77615_3_, f * 2.0F);
+			EntityArrow entityarrow = new EntityArrow(p_77615_2_, p_77615_3_, f * 3.0F);
 
 			if (f == 1.0F)
 			{

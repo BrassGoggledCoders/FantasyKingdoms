@@ -66,7 +66,7 @@ public class ItemShortbow extends ItemBow
 				f = 1.0F;
 			}
 
-			EntityArrow entityarrow = new EntityArrow(p_77615_2_, p_77615_3_, f * 2.0F);
+			EntityArrow entityarrow = new EntityArrow(p_77615_2_, p_77615_3_, f);
 
 			if (f == 1.0F)
 			{
