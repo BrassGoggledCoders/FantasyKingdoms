@@ -1,11 +1,11 @@
-package fantasykingdoms.common.util;
+package fantasykingdoms.common.init;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 
 import net.minecraftforge.common.util.EnumHelper;
 
-public class MaterialHelper
+public class InitMaterials
 {
 	public static ToolMaterial TOOL_JEWELLED, TOOL_SILVER;
 	public static ArmorMaterial ARMOR_PLATE, ARMOR_CHAINMAIL;

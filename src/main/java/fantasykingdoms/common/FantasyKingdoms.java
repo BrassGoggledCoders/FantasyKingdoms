@@ -3,6 +3,7 @@ package fantasykingdoms.common;
 import net.minecraft.creativetab.CreativeTabs;
 
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -16,11 +17,10 @@ import net.minecraftforge.common.MinecraftForge;
 import fantasykingdoms.common.init.InitBlocks;
 import fantasykingdoms.common.init.InitConfig;
 import fantasykingdoms.common.init.InitItems;
+import fantasykingdoms.common.init.InitMaterials;
 import fantasykingdoms.common.init.InitRecipes;
 import fantasykingdoms.common.lib.CreativeTabFantasyKingdoms;
 import fantasykingdoms.common.lib.ModInfo;
-import fantasykingdoms.common.util.LogHelper;
-import fantasykingdoms.common.util.MaterialHelper;
 import fantasykingdoms.common.util.OreDictionaryHandler;
 import fantasykingdoms.common.worldgen.WorldGeneratorFantasyKingdoms;
 
@@ -44,11 +44,11 @@ public class FantasyKingdoms
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		InitConfig.init(event);
-		MaterialHelper.initializeMaterials();
+		InitMaterials.initializeMaterials();
 		InitItems.registerItems();
 		InitBlocks.registerBlocks();
 
-		LogHelper.info("Pre-Initilisation successfully completed");
+		FMLLog.info("Pre-Initilisation successfully completed");
 	}
 
 	@Mod.EventHandler
@@ -64,13 +64,13 @@ public class FantasyKingdoms
 		MinecraftForge.EVENT_BUS.register(new EventHandlerForge());
 		FMLCommonHandler.instance().bus().register(new EventHandlerFML());
 
-		LogHelper.info("Initilisation successfully completed");
+		FMLLog.info("Initilisation successfully completed");
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		LogHelper.info("Post-Initilisation successfully completed");
+		FMLLog.info("Post-Initilisation successfully completed");
 	}
 
 	public void serverStart(FMLServerStartingEvent event)
