@@ -25,10 +25,10 @@ import fantasykingdoms.common.lib.ModInfo;
  * @author Surseance
  *
  */
-public class ItemModBattleaxe extends BaseTool
+public class ItemBattleaxe extends BaseTool
 {
 
-	public ItemModBattleaxe(ToolMaterial mat)
+	public ItemBattleaxe(ToolMaterial mat)
 	{
 		super(mat.getDamageVsEntity() + 4.0F, mat, ModInfo.PREFIX);
 		this.setCreativeTab(FantasyKingdoms.tabKingdoms);

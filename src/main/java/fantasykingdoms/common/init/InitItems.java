@@ -21,7 +21,8 @@ import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemRune;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
-import fantasykingdoms.common.items.tools.ItemModBattleaxe;
+import fantasykingdoms.common.items.tools.ItemBattleaxe;
+import fantasykingdoms.common.items.tools.ItemShortbow;
 import fantasykingdoms.common.lib.ModInfo;
 
 /**
@@ -48,7 +49,7 @@ public class InitItems
 
 	public static Item itemSilverSword, itemSilverPickaxe, itemSilverAxe, itemSilverShovel, itemSilverHoe;
 
-	public static Item itemElvenLongbow, itemElvenShortbow, itemDwarvenCrossbow, itemBolt;
+	public static Item itemLongbow, itemShortbow, itemCrossbow, itemBolt;
 
 	public static Item itemStoneWarhammer, itemIronWarhammer, itemGoldWarhammer, itemDiamondWarhammer, itemJewelledWarhammer, itemSilverWarhammer,
 			itemMithrilWarhammer;
@@ -130,18 +131,21 @@ public class InitItems
 
 		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", ModInfo.MODID);
 
-		itemStoneBattleaxe = new ItemModBattleaxe(ToolMaterial.STONE).setUnlocalizedName("itemBattleaxeStone");
+		itemStoneBattleaxe = new ItemBattleaxe(ToolMaterial.STONE).setUnlocalizedName("itemBattleaxeStone");
 		GameRegistry.registerItem(itemStoneBattleaxe, "ItemStoneBattleaxe");
-		itemIronBattleaxe = new ItemModBattleaxe(ToolMaterial.IRON).setUnlocalizedName("itemBattleaxeIron");
+		itemIronBattleaxe = new ItemBattleaxe(ToolMaterial.IRON).setUnlocalizedName("itemBattleaxeIron");
 		GameRegistry.registerItem(itemIronBattleaxe, "ItemIronBattleaxe");
-		itemGoldBattleaxe = new ItemModBattleaxe(ToolMaterial.GOLD).setUnlocalizedName("itemBattleaxeGold");
+		itemGoldBattleaxe = new ItemBattleaxe(ToolMaterial.GOLD).setUnlocalizedName("itemBattleaxeGold");
 		GameRegistry.registerItem(itemGoldBattleaxe, "ItemGoldBattleaxe");
-		itemDiamondBattleaxe = new ItemModBattleaxe(ToolMaterial.EMERALD).setUnlocalizedName("itemBattleaxeDiamond");
+		itemDiamondBattleaxe = new ItemBattleaxe(ToolMaterial.EMERALD).setUnlocalizedName("itemBattleaxeDiamond");
 		GameRegistry.registerItem(itemDiamondBattleaxe, "ItemDiamondBattleaxe");
-		itemJewelledBattleaxe = new ItemModBattleaxe(InitMaterials.TOOL_JEWELLED).setUnlocalizedName("itemBattleaxeJewelled");
+		itemJewelledBattleaxe = new ItemBattleaxe(InitMaterials.TOOL_JEWELLED).setUnlocalizedName("itemBattleaxeJewelled");
 		GameRegistry.registerItem(itemJewelledBattleaxe, "ItemJewelledBattleaxe");
-		itemSilverBattleaxe = new ItemModBattleaxe(InitMaterials.TOOL_SILVER).setUnlocalizedName("itemBattleaxeSilver");
+		itemSilverBattleaxe = new ItemBattleaxe(InitMaterials.TOOL_SILVER).setUnlocalizedName("itemBattleaxeSilver");
 		GameRegistry.registerItem(itemSilverBattleaxe, "ItemSilverBattleaxe");
+
+		itemShortbow = new ItemShortbow().setUnlocalizedName("itemShortbow");
+		GameRegistry.registerItem(itemShortbow, "ItemShortbow");
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
 		GameRegistry.registerItem(itemRune, "ItemRune");

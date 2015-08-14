@@ -30,7 +30,8 @@ public class FantasyKingdoms
 	/**
 	 * Opposite to shadewood, More stones & woods (elm, ash, yew, ironwood,
 	 * deaththorn) Decorative dwarven blocks (runic patterns, decorative single
-	 * rune blocks, gilded blocks etc)
+	 * rune blocks, gilded blocks etc), broadsword, shortsword, mythril tools
+	 * and armor
 	 */
 	@Mod.Instance("FantasyKingdoms")
 	public static FantasyKingdoms modInstance;
