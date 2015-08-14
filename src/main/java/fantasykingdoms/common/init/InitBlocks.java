@@ -7,7 +7,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 import net.minecraftforge.fluids.Fluid;
 
-import boilerplate.common.baseclasses.BaseItemBlockWithMetadata;
+import boilerplate.common.baseclasses.items.BaseItemBlockWithMetadata;
 import fantasykingdoms.common.blocks.BaseBlock;
 import fantasykingdoms.common.blocks.BlockFog;
 import fantasykingdoms.common.blocks.BlockGemstone;

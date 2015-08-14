@@ -12,7 +12,7 @@
  */
 package fantasykingdoms.common.items;
 
-import boilerplate.common.baseclasses.BaseArmor;
+import boilerplate.common.baseclasses.items.BaseArmor;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.lib.ModInfo;
 

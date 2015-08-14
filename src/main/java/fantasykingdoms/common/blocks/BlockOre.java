@@ -12,7 +12,7 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import boilerplate.common.baseclasses.BaseMetadataBlock;
+import boilerplate.common.baseclasses.blocks.BaseMetadataBlock;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.init.InitBlocks;
 import fantasykingdoms.common.lib.ModInfo;

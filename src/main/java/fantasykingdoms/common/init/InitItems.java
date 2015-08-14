@@ -5,11 +5,11 @@ import net.minecraft.item.Item.ToolMaterial;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import boilerplate.common.baseclasses.tools.BaseAxe;
-import boilerplate.common.baseclasses.tools.BaseHoe;
-import boilerplate.common.baseclasses.tools.BasePickaxe;
-import boilerplate.common.baseclasses.tools.BaseShovel;
-import boilerplate.common.baseclasses.tools.BaseSword;
+import boilerplate.common.baseclasses.items.tools.BaseAxe;
+import boilerplate.common.baseclasses.items.tools.BaseHoe;
+import boilerplate.common.baseclasses.items.tools.BasePickaxe;
+import boilerplate.common.baseclasses.items.tools.BaseShovel;
+import boilerplate.common.baseclasses.items.tools.BaseSword;
 import boilerplate.common.utils.helpers.RegistryHelper;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.items.ItemGem;

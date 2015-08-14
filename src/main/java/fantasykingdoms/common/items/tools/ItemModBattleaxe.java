@@ -17,7 +17,7 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import boilerplate.common.baseclasses.tools.BaseTool;
+import boilerplate.common.baseclasses.items.tools.BaseTool;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.lib.ModInfo;
 
