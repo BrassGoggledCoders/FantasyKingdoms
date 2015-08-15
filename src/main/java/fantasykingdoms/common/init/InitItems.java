@@ -23,6 +23,7 @@ import fantasykingdoms.common.items.dwarven.ItemRune;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
 import fantasykingdoms.common.items.tools.ItemBattleaxe;
 import fantasykingdoms.common.items.tools.ItemLongbow;
+import fantasykingdoms.common.items.tools.ItemMace;
 import fantasykingdoms.common.items.tools.ItemShortbow;
 import fantasykingdoms.common.lib.ModInfo;
 
@@ -144,6 +145,19 @@ public class InitItems
 		GameRegistry.registerItem(itemJewelledBattleaxe, "ItemJewelledBattleaxe");
 		itemSilverBattleaxe = new ItemBattleaxe(InitMaterials.TOOL_SILVER).setUnlocalizedName("itemBattleaxeSilver");
 		GameRegistry.registerItem(itemSilverBattleaxe, "ItemSilverBattleaxe");
+
+		itemStoneMace = new ItemMace(ToolMaterial.STONE).setUnlocalizedName("itemMaceStone");
+		GameRegistry.registerItem(itemStoneMace, "ItemStoneMace");
+		itemIronMace = new ItemMace(ToolMaterial.IRON).setUnlocalizedName("itemMaceIron");
+		GameRegistry.registerItem(itemIronMace, "ItemIronMace");
+		itemGoldMace = new ItemMace(ToolMaterial.GOLD).setUnlocalizedName("itemMaceGold");
+		GameRegistry.registerItem(itemGoldMace, "ItemGoldMace");
+		itemDiamondMace = new ItemMace(ToolMaterial.EMERALD).setUnlocalizedName("itemMaceDiamond");
+		GameRegistry.registerItem(itemDiamondMace, "ItemDiamondMace");
+		itemJewelledMace = new ItemMace(InitMaterials.TOOL_JEWELLED).setUnlocalizedName("itemMaceJewelled");
+		GameRegistry.registerItem(itemJewelledMace, "ItemJewelledMace");
+		itemSilverMace = new ItemMace(InitMaterials.TOOL_SILVER).setUnlocalizedName("itemMaceSilver");
+		GameRegistry.registerItem(itemSilverMace, "ItemSilverMace");
 
 		itemShortbow = new ItemShortbow().setUnlocalizedName("itemShortbow");
 		GameRegistry.registerItem(itemShortbow, "ItemShortbow");
