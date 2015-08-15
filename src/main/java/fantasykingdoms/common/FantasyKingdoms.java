@@ -21,6 +21,8 @@ import fantasykingdoms.common.init.InitMaterials;
 import fantasykingdoms.common.init.InitRecipes;
 import fantasykingdoms.common.lib.CreativeTabFantasyKingdoms;
 import fantasykingdoms.common.lib.ModInfo;
+import fantasykingdoms.common.lib.events.EventHandlerFML;
+import fantasykingdoms.common.lib.events.EventHandlerForge;
 import fantasykingdoms.common.util.OreDictionaryHandler;
 import fantasykingdoms.common.worldgen.WorldGeneratorFantasyKingdoms;
 
