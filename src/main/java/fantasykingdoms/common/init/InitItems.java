@@ -2,6 +2,7 @@ package fantasykingdoms.common.init;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.potion.Potion;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -12,10 +13,13 @@ import boilerplate.common.baseclasses.items.tools.BaseShovel;
 import boilerplate.common.baseclasses.items.tools.BaseSword;
 import boilerplate.common.utils.helpers.RegistryHelper;
 import fantasykingdoms.common.FantasyKingdoms;
+import fantasykingdoms.common.items.ItemDeflectionBelt;
 import fantasykingdoms.common.items.ItemGem;
 import fantasykingdoms.common.items.ItemIngot;
 import fantasykingdoms.common.items.ItemNormalArmor;
 import fantasykingdoms.common.items.ItemNugget;
+import fantasykingdoms.common.items.ItemPotionBelt;
+import fantasykingdoms.common.items.ItemPotionRing;
 import fantasykingdoms.common.items.ItemStygiumRing;
 import fantasykingdoms.common.items.ItemWizardsKey;
 import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
@@ -69,6 +73,8 @@ public class InitItems
 	public static Item itemWizardsKey;
 
 	public static Item itemRune;
+
+	public static Item itemSpeedBelt, itemDeflectionBelt, itemOneRing;
 
 	public static void registerItems()
 	{
@@ -170,5 +176,14 @@ public class InitItems
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
 		GameRegistry.registerItem(itemRune, "ItemRune");
+
+		itemSpeedBelt = new ItemPotionBelt(Potion.moveSpeed.id).setUnlocalizedName("itemSpeedBelt");
+		GameRegistry.registerItem(itemSpeedBelt, "ItemSpeedBelt");
+
+		itemDeflectionBelt = new ItemDeflectionBelt().setUnlocalizedName("itemDeflectionBelt");
+		GameRegistry.registerItem(itemDeflectionBelt, "ItemDeflectionBelt");
+
+		itemOneRing = new ItemPotionRing(Potion.invisibility.id).setUnlocalizedName("itemOneRing");
+		GameRegistry.registerItem(itemOneRing, "ItemOneRing");
 	}
 }
