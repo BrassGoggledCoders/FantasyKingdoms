@@ -24,6 +24,7 @@ import fantasykingdoms.common.items.dwarven.ItemTankard;
 import fantasykingdoms.common.items.tools.ItemBattleaxe;
 import fantasykingdoms.common.items.tools.ItemLongbow;
 import fantasykingdoms.common.items.tools.ItemMace;
+import fantasykingdoms.common.items.tools.ItemRuneblade;
 import fantasykingdoms.common.items.tools.ItemShortbow;
 import fantasykingdoms.common.lib.ModInfo;
 
@@ -163,6 +164,9 @@ public class InitItems
 		GameRegistry.registerItem(itemShortbow, "ItemShortbow");
 		itemLongbow = new ItemLongbow().setUnlocalizedName("itemLongbow");
 		GameRegistry.registerItem(itemLongbow, "ItemLongbow");
+
+		itemRuneblade = new ItemRuneblade(InitMaterials.HTOOL_RUNEBLADE).setUnlocalizedName("itemRuneblade");
+		GameRegistry.registerItem(itemRuneblade, "ItemRuneblade");
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
 		GameRegistry.registerItem(itemRune, "ItemRune");
