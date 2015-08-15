@@ -17,7 +17,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import boilerplate.common.baseclasses.RootItem;
+import boilerplate.common.baseclasses.items.RootItem;
 import fantasykingdoms.common.FantasyKingdoms;
 import fantasykingdoms.common.lib.ModInfo;
 

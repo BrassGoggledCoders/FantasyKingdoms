@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import boilerplate.common.baseclasses.RootItem;
+import boilerplate.common.baseclasses.items.RootItem;
 
 public class ItemDeflectionBelt extends RootItem implements IBauble
 {
