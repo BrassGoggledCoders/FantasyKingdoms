@@ -56,6 +56,8 @@ public class InitItems
 
 	public static Item itemSilverSword, itemSilverPickaxe, itemSilverAxe, itemSilverShovel, itemSilverHoe;
 
+	public static Item itemMythrilSword, itemMythrilPickaxe, itemMythrilAxe, itemMythrilShovel, itemMythrilHoe;
+
 	public static Item itemLongbow, itemShortbow, itemCrossbow, itemBolt;
 
 	public static Item itemStoneWarhammer, itemIronWarhammer, itemGoldWarhammer, itemDiamondWarhammer, itemJewelledWarhammer, itemSilverWarhammer,
@@ -139,6 +141,21 @@ public class InitItems
 				.setCreativeTab(FantasyKingdoms.tabKingdoms);
 
 		RegistryHelper.registerToolSet(itemSilverSword, itemSilverShovel, itemSilverPickaxe, itemSilverAxe, itemSilverHoe, "Silver", ModInfo.MODID);
+
+		// Mythril
+		itemMythrilPickaxe = new BasePickaxe(InitMaterials.TOOL_MYTHRIL, ModInfo.PREFIX).setUnlocalizedName("itemPickaxeMythril")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemMythrilSword = new BaseSword(InitMaterials.TOOL_MYTHRIL, ModInfo.PREFIX).setUnlocalizedName("itemSwordMythril")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemMythrilShovel = new BaseShovel(InitMaterials.TOOL_MYTHRIL, ModInfo.PREFIX).setUnlocalizedName("itemShovelMythril")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemMythrilAxe = new BaseAxe(InitMaterials.TOOL_MYTHRIL, ModInfo.PREFIX).setUnlocalizedName("itemAxeMythril")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemMythrilHoe = new BaseHoe(InitMaterials.TOOL_MYTHRIL, ModInfo.PREFIX).setUnlocalizedName("itemHoeMythril")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+
+		RegistryHelper.registerToolSet(itemMythrilSword, itemMythrilShovel, itemMythrilPickaxe, itemMythrilAxe, itemMythrilHoe, "Mythril",
+				ModInfo.MODID);
 
 		itemStoneBattleaxe = new ItemBattleaxe(ToolMaterial.STONE).setUnlocalizedName("itemBattleaxeStone");
 		GameRegistry.registerItem(itemStoneBattleaxe, "ItemStoneBattleaxe");
