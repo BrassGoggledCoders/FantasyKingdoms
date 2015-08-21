@@ -52,11 +52,21 @@ public class InitItems
 	//
 	public static Item itemHellfireHelmet, itemHellfireChestplate, itemHellfireLeggings, itemHellfireBoots;
 
+	public static Item itemMythrilChainHelmet, itemMythrilChainChestplate, itemMythrilChainLeggings, itemMythrilChainBoots;
+
+	public static Item itemMythrilPlateHelmet, itemMythrilPlateChestplate, itemMythrilPlateLeggings, itemMythrilPlateBoots;
+
+	public static Item itemDragonleatherHelmet, itemDragonleatherChestplate, itemDragonleatherLeggings, itemDragonleatherBoots;
+
+	public static Item itemDragonscaleHelmet, itemDragonscaleChestplate, itemDragonscaleLeggings, itemDragonscaleBoots;
+
 	public static Item itemJewelledSword, itemJewelledPickaxe, itemJewelledAxe, itemJewelledShovel, itemJewelledHoe;
 
 	public static Item itemSilverSword, itemSilverPickaxe, itemSilverAxe, itemSilverShovel, itemSilverHoe;
 
 	public static Item itemMythrilSword, itemMythrilPickaxe, itemMythrilAxe, itemMythrilShovel, itemMythrilHoe;
+
+	public static Item itemDragonboneSword, itemDragonbonePickaxe, itemDragonboneAxe, itemDragonboneShovel, itemDragonboneHoe;
 
 	public static Item itemLongbow, itemShortbow, itemCrossbow, itemBolt;
 
