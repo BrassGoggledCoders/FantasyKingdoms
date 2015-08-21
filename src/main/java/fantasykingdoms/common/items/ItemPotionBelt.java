@@ -1,12 +1,13 @@
 package fantasykingdoms.common.items;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
+import fantasykingdoms.common.FantasyKingdoms;
 
 public class ItemPotionBelt extends Item implements IBauble
 {
@@ -15,8 +16,9 @@ public class ItemPotionBelt extends Item implements IBauble
 	public ItemPotionBelt(int potionid)
 	{
 		this.potionid = potionid;
-		setCreativeTab(CreativeTabs.tabMisc);
+		setCreativeTab(FantasyKingdoms.tabKingdoms);
 	}
+
 	@Override
 	public BaubleType getBaubleType(ItemStack itemstack)
 	{

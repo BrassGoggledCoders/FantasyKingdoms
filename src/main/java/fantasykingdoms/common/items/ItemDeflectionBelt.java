@@ -2,23 +2,25 @@ package fantasykingdoms.common.items;
 
 import java.util.List;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IProjectile;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
 import boilerplate.common.baseclasses.items.RootItem;
+import fantasykingdoms.common.FantasyKingdoms;
 
 public class ItemDeflectionBelt extends RootItem implements IBauble
 {
 
 	public ItemDeflectionBelt()
 	{
-		setCreativeTab(CreativeTabs.tabMisc);
+		setCreativeTab(FantasyKingdoms.tabKingdoms);
 	}
+
 	@Override
 	public BaubleType getBaubleType(ItemStack itemstack)
 	{
@@ -30,10 +32,10 @@ public class ItemDeflectionBelt extends RootItem implements IBauble
 	{
 		World world = player.worldObj;
 		List<Entity> entities = world.getEntitiesWithinAABBExcludingEntity(player, player.boundingBox.expand(5.0D, 5.0D, 5.0D));
-		for(int i=0; i<entities.size(); i++)
+		for (int i = 0; i < entities.size(); i++)
 		{
 			Entity entity = entities.get(i);
-			if(entity instanceof IProjectile)
+			if (entity instanceof IProjectile)
 			{
 				entity.setVelocity(-entity.motionX, entity.motionY, -entity.motionZ);
 			}
