@@ -6,9 +6,11 @@ import net.minecraft.block.material.Material;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 
 import boilerplate.common.baseclasses.items.BaseItemBlockWithMetadata;
 import fantasykingdoms.common.blocks.BaseBlock;
+import fantasykingdoms.common.blocks.BlockCustomFiniteFluid;
 import fantasykingdoms.common.blocks.BlockCustomLeaves;
 import fantasykingdoms.common.blocks.BlockCustomLog;
 import fantasykingdoms.common.blocks.BlockDecorativeStone;
@@ -19,13 +21,12 @@ import fantasykingdoms.common.blocks.BlockInvisLight;
 import fantasykingdoms.common.blocks.BlockMetal;
 import fantasykingdoms.common.blocks.BlockOre;
 import fantasykingdoms.common.blocks.BlockSolidFog;
+import fantasykingdoms.common.blocks.FluidTreasure;
 import fantasykingdoms.common.blocks.dwarven.BlockBarrel;
 import fantasykingdoms.common.blocks.dwarven.BlockExplosiveBarrel;
 
 public class InitBlocks
 {
-	public static Fluid beerFluid, treasureFluid;
-
 	public static Block blockGemOre, blockGemstone;
 	public static Block blockMetalOre;
 	public static Block blockMetal;
@@ -43,6 +44,9 @@ public class InitBlocks
 	public static Block blockFog, blockSolidFog;
 
 	public static Block blockInvisLight;
+
+	public static Block blockTreasureFluid;
+	public static Fluid treasureFluid;
 
 	public static void registerBlocks()
 	{
@@ -126,5 +130,14 @@ public class InitBlocks
 		blockInvisLight = new BlockInvisLight(Material.air).setBlockName("blockInvisLight");
 		GameRegistry.registerBlock(blockInvisLight, "BlockInvisLight");
 
+		treasureFluid = new FluidTreasure("treasure").setUnlocalizedName("treasureFluid");
+		if (!FluidRegistry.isFluidRegistered("treasure"))
+			FluidRegistry.registerFluid(treasureFluid);
+		blockTreasureFluid = new BlockCustomFiniteFluid(treasureFluid, Material.water, "treasure").setBlockName("treasureFluidBlock");
+		GameRegistry.registerBlock(blockTreasureFluid, "BlockTreasure");
+		if (treasureFluid.getBlock() == null)
+			treasureFluid.setBlock(blockTreasureFluid);
+		else
+			((BlockCustomFiniteFluid) blockTreasureFluid).dontOverwriteIcons();
 	}
 }
