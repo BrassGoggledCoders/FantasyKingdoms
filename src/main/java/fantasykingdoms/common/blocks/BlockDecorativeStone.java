@@ -44,10 +44,10 @@ public class BlockDecorativeStone extends BaseMetadataBlock
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(final IIconRegister ir)
 	{
-		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "block" + type + "Raw");
-		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "block" + type + "Polished");
-		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "block" + type + "Bricks");
-		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "block" + type + "Carved");
+		this.icon[0] = ir.registerIcon(ModInfo.PREFIX + "block" + this.type + "Raw");
+		this.icon[1] = ir.registerIcon(ModInfo.PREFIX + "block" + this.type + "Polished");
+		this.icon[2] = ir.registerIcon(ModInfo.PREFIX + "block" + this.type + "Bricks");
+		this.icon[3] = ir.registerIcon(ModInfo.PREFIX + "block" + this.type + "Carved");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

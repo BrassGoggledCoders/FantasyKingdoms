@@ -18,7 +18,7 @@ public class ItemDeflectionBelt extends RootItem implements IBauble
 
 	public ItemDeflectionBelt()
 	{
-		setCreativeTab(FantasyKingdoms.tabKingdoms);
+		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
 	}
 
 	@Override

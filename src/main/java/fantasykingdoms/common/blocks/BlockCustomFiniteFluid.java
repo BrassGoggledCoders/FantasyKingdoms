@@ -53,7 +53,9 @@ public class BlockCustomFiniteFluid extends BlockFluidClassic
 		this.flowIcon = iconRegister.registerIcon(ModInfo.PREFIX + this.texture + "_flow");
 
 		if (this.overwriteIcons)
+		{
 			this.getFluid().setIcons(this.stillIcon, this.flowIcon);
+		}
 	}
 
 	@Override
@@ -61,7 +63,9 @@ public class BlockCustomFiniteFluid extends BlockFluidClassic
 	public IIcon getIcon(int side, int meta)
 	{
 		if ((side == 0) || (side == 1))
+		{
 			return this.stillIcon;
+		}
 		return this.flowIcon;
 	}
 

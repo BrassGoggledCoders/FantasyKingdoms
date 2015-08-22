@@ -16,7 +16,7 @@ public class ItemPotionBelt extends Item implements IBauble
 	public ItemPotionBelt(int potionid)
 	{
 		this.potionid = potionid;
-		setCreativeTab(FantasyKingdoms.tabKingdoms);
+		this.setCreativeTab(FantasyKingdoms.tabKingdoms);
 	}
 
 	@Override
@@ -28,7 +28,7 @@ public class ItemPotionBelt extends Item implements IBauble
 	@Override
 	public void onWornTick(ItemStack itemstack, EntityLivingBase player)
 	{
-		player.addPotionEffect(new PotionEffect(potionid, 0, 2, true));
+		player.addPotionEffect(new PotionEffect(this.potionid, 0, 2, true));
 	}
 
 	@Override

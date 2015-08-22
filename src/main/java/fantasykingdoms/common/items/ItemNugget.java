@@ -58,7 +58,7 @@ public class ItemNugget extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item item, CreativeTabs tab, List l)
 	{
-		for (int var4 = 0; var4 < itemIcon.length; ++var4)
+		for (int var4 = 0; var4 < this.itemIcon.length; ++var4)
 		{
 			l.add(new ItemStack(InitItems.itemNugget, 1, var4));
 		}

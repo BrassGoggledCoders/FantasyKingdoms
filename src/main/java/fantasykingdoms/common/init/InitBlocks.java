@@ -132,12 +132,18 @@ public class InitBlocks
 
 		treasureFluid = new FluidTreasure("treasure").setUnlocalizedName("treasureFluid");
 		if (!FluidRegistry.isFluidRegistered("treasure"))
+		{
 			FluidRegistry.registerFluid(treasureFluid);
+		}
 		blockTreasureFluid = new BlockCustomFiniteFluid(treasureFluid, Material.water, "treasure").setBlockName("treasureFluidBlock");
 		GameRegistry.registerBlock(blockTreasureFluid, "BlockTreasure");
 		if (treasureFluid.getBlock() == null)
+		{
 			treasureFluid.setBlock(blockTreasureFluid);
+		}
 		else
+		{
 			((BlockCustomFiniteFluid) blockTreasureFluid).dontOverwriteIcons();
+		}
 	}
 }

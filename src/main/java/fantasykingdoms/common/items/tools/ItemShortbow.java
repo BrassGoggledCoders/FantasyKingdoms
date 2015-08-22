@@ -49,12 +49,13 @@ public class ItemShortbow extends ItemBow
 	{
 		int j = this.getMaxItemUseDuration(p_77615_1_) - p_77615_4_;
 
-		boolean flag = p_77615_3_.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, p_77615_1_) > 0;
+		boolean flag = p_77615_3_.capabilities.isCreativeMode
+				|| (EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, p_77615_1_) > 0);
 
 		if (flag || p_77615_3_.inventory.hasItem(Items.arrow))
 		{
 			float f = j / 20.0F;
-			f = (f * f + f * 2.0F) / 3.0F;
+			f = ((f * f) + (f * 2.0F)) / 3.0F;
 
 			if (f < 0.1D)
 			{
@@ -77,7 +78,7 @@ public class ItemShortbow extends ItemBow
 
 			if (k > 0)
 			{
-				entityarrow.setDamage(entityarrow.getDamage() + k * 0.5D + 0.5D);
+				entityarrow.setDamage(entityarrow.getDamage() + (k * 0.5D) + 0.5D);
 			}
 
 			int l = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, p_77615_1_);
@@ -93,7 +94,7 @@ public class ItemShortbow extends ItemBow
 			}
 
 			p_77615_1_.damageItem(1, p_77615_3_);
-			p_77615_2_.playSoundAtEntity(p_77615_3_, "random.bow", 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+			p_77615_2_.playSoundAtEntity(p_77615_3_, "random.bow", 1.0F, (1.0F / ((itemRand.nextFloat() * 0.4F) + 1.2F)) + (f * 0.5F));
 
 			if (flag)
 			{
