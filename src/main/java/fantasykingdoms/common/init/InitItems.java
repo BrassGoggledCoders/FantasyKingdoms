@@ -1,5 +1,6 @@
 package fantasykingdoms.common.init;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.potion.Potion;
@@ -26,6 +27,8 @@ import fantasykingdoms.common.items.dwarven.ItemEmptyTankard;
 import fantasykingdoms.common.items.dwarven.ItemRune;
 import fantasykingdoms.common.items.dwarven.ItemTankard;
 import fantasykingdoms.common.items.tools.ItemBattleaxe;
+import fantasykingdoms.common.items.tools.ItemCrossbow;
+import fantasykingdoms.common.items.tools.ItemDagger;
 import fantasykingdoms.common.items.tools.ItemLongbow;
 import fantasykingdoms.common.items.tools.ItemMace;
 import fantasykingdoms.common.items.tools.ItemRuneblade;
@@ -77,6 +80,20 @@ public class InitItems
 			itemMithrilBattleaxe;
 
 	public static Item itemStoneMace, itemIronMace, itemGoldMace, itemDiamondMace, itemJewelledMace, itemSilverMace, itemMithrilMace;
+
+	public static Item itemStoneDagger, itemIronDagger, itemGoldDagger, itemDiamondDagger, itemJewelledDagger, itemSilverDagger, itemMithrilDagger;
+
+	public static Item itemStoneShortsword, itemIronShortsword, itemGoldShortsword, itemDiamondShortsword, itemJewelledShortsword,
+			itemSilverShortsword, itemMithrilShortsword;
+
+	public static Item itemStoneLongsword, itemIronLongsword, itemGoldLongsword, itemDiamondLongsword, itemJewelledLongsword, itemSilverLongsword,
+			itemMithrilLongsword;
+
+	public static Item itemStoneBroadsword, itemIronBroadsword, itemGoldBroadsword, itemDiamondBroadsword, itemJewelledBroadsword,
+			itemSilverBroadsword, itemMithrilBroadsword;
+
+	public static Item itemStoneGreatsword, itemIronGreatsword, itemGoldGreatsword, itemDiamondGreatsword, itemJewelledGreatsword,
+			itemSilverGreatsword, itemMithrilGreatsword;
 
 	public static Item itemRuneblade;
 
@@ -193,10 +210,25 @@ public class InitItems
 		itemSilverMace = new ItemMace(InitMaterials.TOOL_SILVER).setUnlocalizedName("itemMaceSilver");
 		GameRegistry.registerItem(itemSilverMace, "ItemSilverMace");
 
+		itemStoneDagger = new ItemDagger(ToolMaterial.STONE).setUnlocalizedName("itemDaggerStone");
+		GameRegistry.registerItem(itemStoneDagger, "ItemStoneDagger");
+		itemIronDagger = new ItemDagger(ToolMaterial.IRON).setUnlocalizedName("itemDaggerIron");
+		GameRegistry.registerItem(itemIronDagger, "ItemIronDagger");
+		itemGoldDagger = new ItemDagger(ToolMaterial.GOLD).setUnlocalizedName("itemDaggerGold");
+		GameRegistry.registerItem(itemGoldDagger, "ItemGoldDagger");
+		itemDiamondDagger = new ItemDagger(ToolMaterial.EMERALD).setUnlocalizedName("itemDaggerDiamond");
+		GameRegistry.registerItem(itemDiamondDagger, "ItemDiamondDagger");
+		itemJewelledDagger = new ItemDagger(InitMaterials.TOOL_JEWELLED).setUnlocalizedName("itemDaggerJewelled");
+		GameRegistry.registerItem(itemJewelledDagger, "ItemJewelledDagger");
+		itemSilverDagger = new ItemDagger(InitMaterials.TOOL_SILVER).setUnlocalizedName("itemDaggerSilver");
+		GameRegistry.registerItem(itemSilverDagger, "ItemSilverDagger");
+
 		itemShortbow = new ItemShortbow().setUnlocalizedName("itemShortbow");
 		GameRegistry.registerItem(itemShortbow, "ItemShortbow");
 		itemLongbow = new ItemLongbow().setUnlocalizedName("itemLongbow");
 		GameRegistry.registerItem(itemLongbow, "ItemLongbow");
+		itemCrossbow = new ItemCrossbow(8, 120, Items.arrow, null, "", "").setUnlocalizedName("itemCrossbow");
+		GameRegistry.registerItem(itemCrossbow, "ItemCrossbow");
 
 		itemRuneblade = new ItemRuneblade(InitMaterials.HTOOL_RUNEBLADE).setUnlocalizedName("itemRuneblade");
 		GameRegistry.registerItem(itemRuneblade, "ItemRuneblade");
