@@ -8,7 +8,7 @@ import net.minecraftforge.common.util.EnumHelper;
 public class InitMaterials
 {
 	public static ToolMaterial HTOOL_RUNEBLADE;
-	public static ToolMaterial TOOL_JEWELLED, TOOL_SILVER, TOOL_MYTHRIL;
+	public static ToolMaterial TOOL_JEWELLED, TOOL_SILVER, TOOL_MYTHRIL, TOOL_DRAGONBONE;
 	public static ArmorMaterial ARMOR_PLATE, ARMOR_CHAINMAIL, ARMOR_MYTHRILCHAIN, ARMOR_MYTHRILPLATE, ARMOR_DRAGONLEATHER, ARMOR_DRAGONSCALE;
 
 	public static void initializeMaterials()
@@ -16,6 +16,7 @@ public class InitMaterials
 		TOOL_JEWELLED = EnumHelper.addToolMaterial("TOOL_JEWELLED", 2, 200, 12.0F, 0.0F, 32);
 		TOOL_SILVER = EnumHelper.addToolMaterial("TOOL_SILVER", 2, 128, 6.0F, 0.0F, 12);
 		TOOL_MYTHRIL = EnumHelper.addToolMaterial("TOOL_MYTHRIL", 4, 2000, 12.0F, 3.0F, 20);
+		TOOL_DRAGONBONE = EnumHelper.addToolMaterial("TOOL_DRAGONBONE", 4, 4000, 15.0F, 4.0F, 40);
 
 		HTOOL_RUNEBLADE = EnumHelper.addToolMaterial("HTOOL_RUNEBLADE", 0, 128, 0, 0.0F, 40);
 

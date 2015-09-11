@@ -184,6 +184,21 @@ public class InitItems
 		RegistryHelper.registerToolSet(itemMythrilSword, itemMythrilShovel, itemMythrilPickaxe, itemMythrilAxe, itemMythrilHoe, "Mythril",
 				ModInfo.MODID);
 
+		// Dragonbone
+		itemDragonbonePickaxe = new BasePickaxe(InitMaterials.TOOL_DRAGONBONE, ModInfo.PREFIX).setUnlocalizedName("itemPickaxeDragonbone")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemDragonboneSword = new BaseSword(InitMaterials.TOOL_DRAGONBONE, ModInfo.PREFIX).setUnlocalizedName("itemSwordDragonbone")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemDragonboneShovel = new BaseShovel(InitMaterials.TOOL_DRAGONBONE, ModInfo.PREFIX).setUnlocalizedName("itemShovelDragonbone")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemDragonboneAxe = new BaseAxe(InitMaterials.TOOL_DRAGONBONE, ModInfo.PREFIX).setUnlocalizedName("itemAxeDragonbone")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+		itemDragonboneHoe = new BaseHoe(InitMaterials.TOOL_DRAGONBONE, ModInfo.PREFIX).setUnlocalizedName("itemHoeDragonbone")
+				.setCreativeTab(FantasyKingdoms.tabKingdoms);
+
+		RegistryHelper.registerToolSet(itemDragonboneSword, itemDragonboneShovel, itemDragonbonePickaxe, itemDragonboneAxe, itemDragonboneHoe,
+				"Dragonbone", ModInfo.MODID);
+
 		itemStoneBattleaxe = new ItemBattleaxe(ToolMaterial.STONE).setUnlocalizedName("itemBattleaxeStone");
 		GameRegistry.registerItem(itemStoneBattleaxe, "ItemStoneBattleaxe");
 		itemIronBattleaxe = new ItemBattleaxe(ToolMaterial.IRON).setUnlocalizedName("itemBattleaxeIron");
