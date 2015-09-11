@@ -123,7 +123,7 @@ public class InitBlocks
 		blockRunicForge = new BaseBlock(Material.rock).setBlockName("blockRunicForge");
 		GameRegistry.registerBlock(blockRunicForge, "BlockRunicForge");
 
-		blockRunicAnvil = new BaseBlock(Material.anvil);
+		blockRunicAnvil = new BaseBlock(Material.anvil).setBlockName("blockRunicAnvil");
 		GameRegistry.registerBlock(blockRunicAnvil, "BlockRunicAnvil");
 
 		blockFog = new BlockFog().setBlockName("blockFog");
