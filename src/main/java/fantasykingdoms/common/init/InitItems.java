@@ -71,7 +71,7 @@ public class InitItems
 
 	public static Item itemDragonboneSword, itemDragonbonePickaxe, itemDragonboneAxe, itemDragonboneShovel, itemDragonboneHoe;
 
-	public static Item itemLongbow, itemShortbow, itemCrossbow, itemBolt;
+	public static Item itemLongbow, itemShortbow, itemCrossbow, itemIronwoodCrossbow, itemElfwoodShortbow, itemElfwoodLongbow;
 
 	public static Item itemStoneWarhammer, itemIronWarhammer, itemGoldWarhammer, itemDiamondWarhammer, itemJewelledWarhammer, itemSilverWarhammer,
 			itemMithrilWarhammer;
@@ -229,6 +229,13 @@ public class InitItems
 		GameRegistry.registerItem(itemLongbow, "ItemLongbow");
 		itemCrossbow = new ItemCrossbow(8, 120, Items.arrow, null, "", "").setUnlocalizedName("itemCrossbow");
 		GameRegistry.registerItem(itemCrossbow, "ItemCrossbow");
+
+		itemElfwoodShortbow = new ItemShortbow().setUnlocalizedName("itemElfwoodShortbow");
+		GameRegistry.registerItem(itemElfwoodShortbow, "itemElfwoodShortbow");
+		itemElfwoodLongbow = new ItemLongbow().setUnlocalizedName("itemElfwoodLongbow");
+		GameRegistry.registerItem(itemElfwoodLongbow, "itemElfwoodLongbow");
+		itemIronwoodCrossbow = new ItemCrossbow(12, 150, Items.arrow, null, "", "").setUnlocalizedName("itemIronwoodCrossbow");
+		GameRegistry.registerItem(itemIronwoodCrossbow, "ItemIronwoodCrossbow");
 
 		itemRuneblade = new ItemRuneblade(InitMaterials.HTOOL_RUNEBLADE).setUnlocalizedName("itemRuneblade");
 		GameRegistry.registerItem(itemRuneblade, "ItemRuneblade");

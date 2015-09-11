@@ -39,7 +39,9 @@ public class InitBlocks
 	public static Block blockBarrel;
 	public static Block blockExplosiveBarrel;
 
-	public static Block blockAltar;
+	public static Block blockRunicForge;
+
+	public static Block blockRunicAnvil;
 
 	public static Block blockFog, blockSolidFog;
 
@@ -118,8 +120,11 @@ public class InitBlocks
 		blockExplosiveBarrel = new BlockExplosiveBarrel().setBlockName("blockExplosiveBarrel");
 		GameRegistry.registerBlock(blockExplosiveBarrel, "BlockExplosiveBarrel");
 
-		blockAltar = new BaseBlock(Material.anvil).setBlockName("blockAltar");
-		// GameRegistry.registerBlock(blockAltar, "BlockAltar");
+		blockRunicForge = new BaseBlock(Material.rock).setBlockName("blockRunicForge");
+		GameRegistry.registerBlock(blockRunicForge, "BlockRunicForge");
+
+		blockRunicAnvil = new BaseBlock(Material.anvil);
+		GameRegistry.registerBlock(blockRunicAnvil, "BlockRunicAnvil");
 
 		blockFog = new BlockFog().setBlockName("blockFog");
 		GameRegistry.registerBlock(blockFog, "BlockFog");
