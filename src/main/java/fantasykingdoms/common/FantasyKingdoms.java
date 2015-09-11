@@ -30,10 +30,8 @@ import fantasykingdoms.common.worldgen.WorldGeneratorFantasyKingdoms;
 public class FantasyKingdoms
 {
 	/**
-	 * Opposite to shadewood (holywood?), More stones & woods (elm, ash, yew,
-	 * ironwood, deaththorn) Decorative dwarven blocks (runic patterns,
-	 * decorative single rune blocks, gilded blocks etc), broadsword,
-	 * shortsword, mythril tools and armor
+	 * Opposite to shadewood (holywood?), Decorative dwarven blocks (runic
+	 * patterns, decorative single rune blocks, gilded blocks etc)
 	 */
 	@Mod.Instance("FantasyKingdoms")
 	public static FantasyKingdoms modInstance;
