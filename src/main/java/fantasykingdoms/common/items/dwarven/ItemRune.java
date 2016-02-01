@@ -28,30 +28,30 @@ public class ItemRune extends BaseItemWithMetadata
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon[0] = ir.registerIcon(ModInfo.PREFIX + "itemRuneFehu");
-		this.itemIcon[1] = ir.registerIcon(ModInfo.PREFIX + "itemRuneUruz");
-		this.itemIcon[2] = ir.registerIcon(ModInfo.PREFIX + "itemRuneThurisaz");
-		this.itemIcon[3] = ir.registerIcon(ModInfo.PREFIX + "itemRuneAnsuz");
-		this.itemIcon[4] = ir.registerIcon(ModInfo.PREFIX + "itemRuneRaido");
-		this.itemIcon[5] = ir.registerIcon(ModInfo.PREFIX + "itemRuneKenaz");
-		this.itemIcon[6] = ir.registerIcon(ModInfo.PREFIX + "itemRuneGifu");
-		this.itemIcon[7] = ir.registerIcon(ModInfo.PREFIX + "itemRuneWunjo");
-		this.itemIcon[8] = ir.registerIcon(ModInfo.PREFIX + "itemRuneHagalaz");
-		this.itemIcon[9] = ir.registerIcon(ModInfo.PREFIX + "itemRuneNauthiz");
-		this.itemIcon[10] = ir.registerIcon(ModInfo.PREFIX + "itemRuneIsa");
-		this.itemIcon[11] = ir.registerIcon(ModInfo.PREFIX + "itemRuneJera");
-		this.itemIcon[12] = ir.registerIcon(ModInfo.PREFIX + "itemRuneEihwaz");
-		this.itemIcon[13] = ir.registerIcon(ModInfo.PREFIX + "itemRunePertho");
-		this.itemIcon[14] = ir.registerIcon(ModInfo.PREFIX + "itemRuneAlgiz");
-		this.itemIcon[15] = ir.registerIcon(ModInfo.PREFIX + "itemRuneSowulo");
-		this.itemIcon[16] = ir.registerIcon(ModInfo.PREFIX + "itemRuneTeiwaz");
-		this.itemIcon[17] = ir.registerIcon(ModInfo.PREFIX + "itemRuneBerkana");
-		this.itemIcon[18] = ir.registerIcon(ModInfo.PREFIX + "itemRuneEhwaz");
-		this.itemIcon[19] = ir.registerIcon(ModInfo.PREFIX + "itemRuneMannaz");
-		this.itemIcon[20] = ir.registerIcon(ModInfo.PREFIX + "itemRuneLaguz");
-		this.itemIcon[21] = ir.registerIcon(ModInfo.PREFIX + "itemRuneInguz");
-		this.itemIcon[22] = ir.registerIcon(ModInfo.PREFIX + "itemRuneOthila");
-		this.itemIcon[23] = ir.registerIcon(ModInfo.PREFIX + "itemRuneDagaz");
+		this.itemIcon[0] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneFehu");
+		this.itemIcon[1] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneUruz");
+		this.itemIcon[2] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneThurisaz");
+		this.itemIcon[3] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneAnsuz");
+		this.itemIcon[4] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneRaido");
+		this.itemIcon[5] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneKenaz");
+		this.itemIcon[6] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneGifu");
+		this.itemIcon[7] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneWunjo");
+		this.itemIcon[8] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneHagalaz");
+		this.itemIcon[9] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneNauthiz");
+		this.itemIcon[10] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneIsa");
+		this.itemIcon[11] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneJera");
+		this.itemIcon[12] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneEihwaz");
+		this.itemIcon[13] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRunePerthro");
+		this.itemIcon[14] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneAlgiz");
+		this.itemIcon[15] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneSowulo");
+		this.itemIcon[16] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneTeiwaz");
+		this.itemIcon[17] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneBerkana");
+		this.itemIcon[18] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneEhwaz");
+		this.itemIcon[19] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneMannaz");
+		this.itemIcon[20] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneLaguz");
+		this.itemIcon[21] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneInguz");
+		this.itemIcon[22] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneOthila");
+		this.itemIcon[23] = ir.registerIcon(ModInfo.PREFIX + "runes/itemRuneDagaz");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

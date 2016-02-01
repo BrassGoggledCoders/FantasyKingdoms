@@ -133,7 +133,7 @@ public class InitItems
 		RegistryHelper.registerArmorSet(itemPlateHelmet, itemPlateChestplate, itemPlateLeggings, itemPlateBoots, "Plate", ModInfo.MODID);
 
 		itemChainmailHelmet = new ItemNormalArmor(InitMaterials.ARMOR_CHAINMAIL, 0, "chainmail").setUnlocalizedName("itemHelmetChainmail");
-		itemChainmailChestplate = new ItemNormalArmor(InitMaterials.ARMOR_CHAINMAIL, 1, "chainmail").setUnlocalizedName("itemChainmailChestplate");
+		itemChainmailChestplate = new ItemNormalArmor(InitMaterials.ARMOR_CHAINMAIL, 1, "chainmail").setUnlocalizedName("itemChestplateChainmail");
 		itemChainmailLeggings = new ItemNormalArmor(InitMaterials.ARMOR_CHAINMAIL, 2, "chainmail").setUnlocalizedName("itemLegsChainmail");
 		itemChainmailBoots = new ItemNormalArmor(InitMaterials.ARMOR_CHAINMAIL, 3, "chainmail").setUnlocalizedName("itemBootsChainmail");
 
