@@ -14,6 +14,7 @@ import boilerplate.common.baseclasses.items.tools.BaseShovel;
 import boilerplate.common.baseclasses.items.tools.BaseSword;
 import boilerplate.common.utils.helpers.RegistryHelper;
 import fantasykingdoms.common.FantasyKingdoms;
+import fantasykingdoms.common.items.BaseItem;
 import fantasykingdoms.common.items.ItemDeflectionBelt;
 import fantasykingdoms.common.items.ItemGem;
 import fantasykingdoms.common.items.ItemIngot;
@@ -101,7 +102,7 @@ public class InitItems
 
 	public static Item itemWizardsKey;
 
-	public static Item itemRune;
+	public static Item itemBlankRune, itemRune;
 
 	public static Item itemSpeedBelt, itemDeflectionBelt, itemOneRing;
 
@@ -254,6 +255,9 @@ public class InitItems
 
 		itemRuneblade = new ItemRuneblade(InitMaterials.HTOOL_RUNEBLADE).setUnlocalizedName("itemRuneblade");
 		GameRegistry.registerItem(itemRuneblade, "ItemRuneblade");
+
+		itemBlankRune = new BaseItem().setUnlocalizedName("itemBlankRune");
+		GameRegistry.registerItem(itemBlankRune, "itemBlankRune");
 
 		itemRune = new ItemRune().setUnlocalizedName("itemRune");
 		GameRegistry.registerItem(itemRune, "ItemRune");

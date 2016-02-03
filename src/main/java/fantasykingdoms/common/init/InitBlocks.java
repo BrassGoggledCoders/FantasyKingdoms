@@ -24,6 +24,7 @@ import fantasykingdoms.common.blocks.BlockSolidFog;
 import fantasykingdoms.common.blocks.FluidTreasure;
 import fantasykingdoms.common.blocks.dwarven.BlockBarrel;
 import fantasykingdoms.common.blocks.dwarven.BlockExplosiveBarrel;
+import fantasykingdoms.common.blocks.dwarven.BlockRunicAnvil;
 
 public class InitBlocks
 {
@@ -49,6 +50,8 @@ public class InitBlocks
 
 	public static Block blockTreasureFluid;
 	public static Fluid treasureFluid;
+
+	// Display cases
 
 	public static void registerBlocks()
 	{
@@ -123,7 +126,7 @@ public class InitBlocks
 		blockRunicForge = new BaseBlock(Material.rock).setBlockName("blockRunicForge");
 		GameRegistry.registerBlock(blockRunicForge, "BlockRunicForge");
 
-		blockRunicAnvil = new BaseBlock(Material.anvil).setBlockName("blockRunicAnvil");
+		blockRunicAnvil = new BlockRunicAnvil(Material.anvil).setBlockName("blockRunicAnvil");
 		GameRegistry.registerBlock(blockRunicAnvil, "BlockRunicAnvil");
 
 		blockFog = new BlockFog().setBlockName("blockFog");
